@@ -822,5 +822,110 @@ label scene_12:
 
     Avec ça, je suis une tombeuse d’hommes."""
 
+    jump scene_13
+
+label scene_13:
+    scene black
+    with fade
+
+    """
+    William sentait son esprit commencer à flotter au-dessus de son corps dans un état extatique qui ne peut d’ordinaire être atteint qu’après avoir consommé quantité de substances illicites.
+
+    Brutalement, il eut mal.
+
+    Atrocement mal.
+
+    Sans doute pire que ce qu’il n’avait jamais enduré.
+
+    Sa gorge le brûla et pendant quelques secondes il crut qu’on lui avait injecté de la lave dans la bouche.
+
+    Ensuite, il réalisa que ce n’était que du sang.
+    """
+
+    carimall "Ah, tu te réveilles."
+
+    william "Aaargl."
+    
+    "La jeune femme retira le poignet qu’elle s’était ouvert et lança un sourire charmeur au nouveau vampire."
+
+    carimall """
+    Je sais, ça fait un peu mal.
+
+    Mais ce n’est qu’une fois pour l’éternité."""
+
+    william "Urgl."
+
+    "Le peintre tâcha de s'asseoir."
+
+    carimall """Attends un peu.
+
+    Ça ira mieux dans quelques instants."""
+
+    william "Si tu… le dis…"
+
+    carimall """Par contre, je te préviens, ton corps va changer un peu, dans les jours qui vont venir…
+
+    Mais il paraît que ce n’est pas si dramatique."""
+
+    william "« Il paraît » ?"
+
+    carimall "Ben, moi je suis née comme ça. Je ne peux pas savoir."
+
+    william "Mais tu as dit hier que tu avais traversé des changements…"
+
+    carimall """
+    Oh, oui.
+
+    Je ne parlais juste pas de ça.
+
+    Je pensais que tu avais compris…"""
+
+    william """Non.
+
+    Tu parlais de quoi, alors ?"""
+
+    carimall """Je suis née vampire.
+
+    Par contre, je n’étais pas une petite fille."""
+
+    "William écarquilla les yeux de surprise."
+
+    william "QUOI ?" with vpunch
+
+    william """Tu veux dire qu’il y a des bébés vampires ?
+
+    Je croyais que c’était, tu sais ? On ne naît pas vampire, on meurt vampire."""
+
+    carimall """Pas tout le temps.
+
+    Ce que je te disais ce matin…"""
+
+    "Elle approcha son visage de celui du nouveau vampire."
+
+    william "Quoi ?"
+
+    "Il était vaguement dégouté par les lèvres trop proches de Carimall qui, elle, semblait amusée."
+
+    carimall "Tu disais que ce que j’étais réellement n’avait pas d’importance…"
+
+    william "Euh, ouais."
+
+    "Il repoussa doucement la jeune femme."
+
+    william """
+    Je ne le disais pas dans ce sens-là non plus.
+
+    Je ne suis pas attiré par les filles."""
+
+    carimall "Oh."
+
+    "William s'alluma une cigarette. Il estimait l'avoir bien méritée."
+
+    william """Désolé.
+
+    Mais, de toute façon, sans être très à cheval sur la morale, ça n’aurait pas été un peu, euh, incestueux ?
+
+    Je veux dire, t’es comme, genre, ma mère vampirique, non ?"""
+
 label fin:
     return
