@@ -6,6 +6,7 @@ define ekul = Character("Comte d'Ekul")
 define femme1 = Character("Femme mystérieuse")
 define femme2 = Character("Femme mystérieuse")
 define femme3 = Character("Femme mystérieuse")
+define inqui = Character("Inquisiteur")
 
 label start:
     scene black
@@ -630,6 +631,196 @@ label scene_10:
     william """Je ne sais pas.
 
     Mais je crois que je vais aller me coucher. Tes raisonnements me filent mal au crâne."""
+
+    jump scene_11
+
+label scene_11:
+    scene black
+    with fade
+
+    angele "Will ?"
+
+    "Le jeune homme ouvrit un œil, grimaça, et le referma."
+
+    angele "Will !"
+
+    william "Hmmmpf ? Quoi ?"
+
+    angele "Tu devrais te lever et descendre dans le hall d’entrée."
+
+    william """Hmmm, hmmm.
+
+    Pourquoi ?"""
+
+    angele "Parce que, si mes calculs sont justes, ça devrait être la guerre d’ici approximativement trente secondes."
+
+    jump scene_12
+
+label scene_12:
+    scene black
+    with fade
+
+    """
+    William se précipita dans le hall d’entrée et arriva en plein milieu d’une bagarre générale.
+
+    Jugeant qu’il n’était pas assez réveillé pour participer à un combat, il se contenta d’observer, en allumant une cigarette pour s’éclaircir les idées.
+
+    Au bout de quelques instants, les conclusions qu’il tira furent les suivantes :
+
+    {b}1 :{/b} une demi-douzaine d’hommes armés étaient entrés dans le château ;
+
+    {b}2 :{/b} leurs tenues semblaient indiquer qu’ils faisaient partie de l’église ;
+
+    {b}3 :{/b} en face d’eux, le comte, sa fille et les trois femmes paraissaient bien démunis.
+
+    Pas étonnant. Il faisait encore jour.
+
+    Le cocher, en revanche, semblait mieux s’en sortir, puisqu’il se transforma en loup géant et parvint à égorger deux hommes et à arracher le cœur d’un troisième avant de mourir d’un carreau en argent qu’il reçut dans la tête.
+
+    Le peintre avança, remarqua que personne ne faisait attention à lui et ramassa une arbalète qu’un homme avait fait tomber.
+
+    Le rapport de force avait évolué avec la mort du cocher car, s’il n’y avait plus que trois assaillants, dont celui qui paraissait être leur chef au vu de sa magnifique cape blanche, les habitants du château semblaient effrayés.
+
+    Le comte regarda sa fille.
+    """
+
+    ekul "Fuis !"
+
+    """Il se jeta en hurlant sur un des hommes.
+
+    Mais celui-ci parvint à plonger un pieu dans son corps et Ekul s’écroula, pendant que sa fille prenait la fuite, suivie des trois femmes que William avait croisées la veille.
+
+    Le soldat n’eut cependant pas le temps de se glorifier de son acte, puisqu’il reçut un carreau en pleine tête et mourut aussitôt. Les regards des deux hommes restants se tournèrent vers le peintre."""
+
+    inqui "Qu’avez-vous fait, sombre idiot ?"
+
+    "Pendant qu'il hurlait, le peintre rechargeait son arme."
+
+    inqui "Nous sommes de l’inquisition, venus vous sauver de ces monstres buveurs de sang !"
+
+    william "Vraiment ?"
+
+    inqui "Évidemment ! Ce sont des…"
+
+    william "…vampires ?"
+
+    "Il envoya en souriant un nouveau carreau dans la tête du soldat le moins gradé."
+
+    william "Il aurait fallu que je sois aveugle pour ne pas le réaliser plus tôt."
+
+    inqui "Impie ! Hérétique !"
+
+    """Il dégaina son épée et chargea.
+
+    Le jeune homme lâcha son arbalète devenue inutile et parvint de justesse à ramasser une épée sur un cadavre pour parer le coup.
+    """
+
+    $ inqui = "Évêque Cromwey"
+
+    inqui "Je suis l’évêque Cromwey !"
+
+    "Il hurlait entre deux passes d’armes."
+
+    inqui "Prépare-toi à mourir !"
+
+    """William se baissa juste à temps pour éviter la lame, envoya un coup de pied dans les tibias de son adversaire et se précipita dans les escaliers en colimaçon."""
+
+    angele "Je crois que tu aurais dû arrêter le tabac."
+
+    """
+    William, en effet, s’épuisait en courant dans les escaliers. Heureusement pour lui, l’évêque n’avait pas un meilleur souffle que lui et il commença à perdre du terrain à partir du quatrième étage.
+    """
+
+    angele "Au fait, tu sais où tu vas ?"
+
+    william """
+    Évidemment…
+
+    pfff…
+
+    que…
+
+    pfff…
+
+    non…"""
+
+    "Il comprit la remarque perfide d’Angèle lorsqu’il ouvrit la porte qui le bloquait d’un coup de pied rageur et réalisa qu’il se trouvait au sommet d’une tour."
+
+    angele """Il faut voir le bon côté des choses.
+
+    Le paysage est magnifique.
+
+    Il va te tuer devant un superbe décor."""
+
+    """William eut à peine le temps de se retourner et de bloquer l’épée de l’évêque, qui paraissait au contraire rasséréné par un tel paysage.
+
+    Les deux combattants échangèrent quelques bottes, plutôt faiblardes à cause de leur épuisement, avant que d’un geste bien placé l’inquisiteur ne désarme son adversaire.
+
+    Le peintre regarda son épée tomber dans le ravin que surplombait le château et déglutit."""
+
+    inqui "Pourquoi t’es tu donc allié avec ces misérables créatures ?"
+
+    william """
+    Carimall est sympathique.
+
+    Qu’est-ce qu’elle a fait de mal ? On ne choisit pas ses parents."""
+
+    inqui """Cette créature est maudite.
+
+    Pire encore que les autres.
+
+    Il faut libérer son âme en brûlant son corps."""
+
+    "William fronça les sourcils."
+
+    william "Pire encore que les autres ?"
+
+    inqui "Oh, tu n’étais pas au courant, hein ?"
+
+    william """
+    Peu importe.
+
+    De toute façon, je préfère mille fois les vampires aux ordures de votre espèce."""
+
+    inqui "Tu blasphèmes, misérable, alors qu’il te faudrait te repentir."
+
+    william "J’assume tous mes pêchés."
+
+    inqui "Alors, tu iras en Enfer."
+
+    "William arbora un sourire défiant."
+
+    william """J’aime autant.
+
+    Votre Ciel est beaucoup trop hétérosexuel pour moi."""
+
+    """
+    Il se lança alors sur son adversaire.
+
+    La lame de ce dernier lui transperça le cœur.
+
+    Mais William continua à sourire et bascula par-dessus le muret.
+
+    L’évêque réalisa trop tard que William voulait l’entraîner dans sa chute.
+
+    Il parvint néanmoins à se rattraper de justesse à une fissure et se dégagea du jeune homme qui lui tenait la jambe, l’envoyant mourir loin en contrebas.
+
+    Il allait remonter lorsqu’il réalisa que quelqu’un s’était mis debout sur le muret. Levant la tête, il aperçut une femme aux jambes d’autant plus impressionnantes qu’il était situé en dessous."""
+
+    carimall """
+    C’est les chaussures à talon.
+
+    Ça fait de longues jambes.
+
+    Et ça a un autre intérêt…"""
+
+    """Elle le lui démontra en lui enfonçant sa chaussure dans la main.
+
+    L'évêque chuta en hurlant."""
+
+    carimall """Ouais, je sais.
+
+    Avec ça, je suis une tombeuse d’hommes."""
 
 label fin:
     return
