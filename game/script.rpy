@@ -1,20 +1,12 @@
-﻿# Vous pouvez placer le script de votre jeu dans ce fichier.
-
-# Déclarez sous cette ligne les images, avec l'instruction 'image'
-# ex: image eileen heureuse = "eileen_heureuse.png"
-
-# Déclarez les personnages utilisés dans le jeu.
-define e = Character('Eileen', color="#c8ffc8")
-
-define angele = Character('Angèle')
+﻿define angele = Character('Angèle')
 define william = Character("William")
 define loup = Character("Loup")
 define carimall = Character("Carimall")
+define ekul = Character("Compte d'Ekul")
 
-# define narrator = nvl_narrator
-
-# Le jeu commence ici
 label start:
+    scene black
+    with fade
     """
     William fit un sourire crispé à la petite fille qui lui tirait la langue et tourna la tête vers la fenêtre de la diligence.
 
@@ -138,7 +130,7 @@ label start:
 
     "William haussa les épaules et essaya de s’approcher doucement d’un arbre. Il n’était pas très doué en escalade mais, s’il apprenait vite, il avait peut-être une chance de s’en sortir vivant."
 
-    angele "Quelqu’un approche"
+    angele "Quelqu’un approche."
 
     """
     William stoppa net, décidant que si quelqu’un arrivait pour le sauver du pétrin il valait mieux pour son prestige qu’il ne soit pas en train d’essayer de grimper de manière ridicule.
@@ -176,5 +168,56 @@ label start:
     "Elle les souleva comme si elles n’avaient rien pesé."
 
     william "Euh, bon, ben, d’accord. Je vous suis."
-    
+
+    jump scene_1
+
+label scene_1:
+   scene black
+   with fade
+
+   """Lorsqu’ils atteignirent le fiacre accidenté, le cocher était en train de terminer de réparer et ils ne durent attendre que quelques minutes avant de poursuivre leur chemin vers le château d’Ekul."""
+
+   carimall """Je suis tellement heureuse de voir quelqu’un !
+
+   Nous ne recevons pas beaucoup, vous savez."""
+
+   "William aperçut la silhouette lugubre du château, le chemin sinueux bordé de ravins qui menait vers lui et la pleine lune en partie masquée par une tour."
+
+   william "Je vois vraiment pas pourquoi…"
+
+   "Mais il marmonnait trop bas pour que la jeune femme l’entende."
+
+   jump scene_2
+
+label scene_2:
+    scene black
+    with fade
+   
+    "Le comte d’Ekul attendait sur le pas de la porte. C’était un homme de taille moyenne et de forte corpulence, aux cheveux noirs épais et broussailleux, qui avait quelque chose d’un peu effrayant dans le regard."
+
+    ekul """Bienvenue dans ma demeure !
+
+    Entrez-y librement et de votre plein gré !"""
+
+    william "Ben, vu le chemin que j’ai fait, je ne comptais pas rester dehors."
+
+    "William marmonnait trop bas pour que son interlocuteur l’entende."
+
+    ekul "Bienvenue dans ma demeure ! Entrez-y librement, et laissez un peu de la joie que vous y apportez !"
+
+    angele "Faudrait voir à changer de disque."
+
+    "De son côté, William s’inclinait respectueusement et serrait la main du comte, ou, plutôt, se faisait broyer la main par lui."
+
+    william "Ravi de faire votre connaissance, Monsieur le comte."
+
+    ekul "Venez. Vous devez mourir de faim. Je vais prendre vos bagages."
+
+    "Le jeune homme n’eut pas le temps de protester, car l’homme s’était déjà emparé des deux valises. Le cocher était occupé à détacher les chevaux, tandis que Carimall avait disparu."
+
+    william "Et votre fille ?"
+
+    ekul "Oh, elle est repartie. Elle aime se promener la nuit. Venez, suivez-moi."
+
+label fin:
     return
