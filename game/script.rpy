@@ -382,7 +382,110 @@ Alors qu’il sortait de la pièce, il faillit percuter le comte d’Ekul, qui, 
 
     william "Non, d’ailleurs, si vous pouviez me montrer sur un plan où se trouve le salon…"
 
-    
+    jump scene_6
+
+label scene_6:
+    scene black
+    with fade
+
+    """
+    William fut une nouvelle fois le seul à dîner, même si le comte et Carimall discutaient à côté de lui pendant qu’il mangeait.
+
+Ensuite, il suivit la jeune femme pour commencer à peindre son portrait. Elle posa de manière très conventionnelle, mais eut simplement une requête étrange :
+    """
+
+    carimall "Je pose à l’intérieur, mais est-ce que vous pourriez dessiner un ciel bleu derrière moi ?"
+
+    william """Bien sûr.
+
+    Ou un coucher de soleil, ce serait plus joli, non ?"""
+
+    carimall """
+    Non !
+
+    Le ciel bleu.
+
+    Et un soleil.
+
+    S’il vous plaît ? Vous comprenez ?
+
+    J’ai des problèmes de peau. Le soleil me donne d’affreuses rougeurs… qu’au moins sur un portrait je puisse y avoir droit."""
+
+    william "Cela doit être dur."
+
+    carimall "Vous n’imaginez pas. Et en plus, nous sommes dans un pays si reculé…"
+
+    william """
+    Il faut voir le bon côté des choses. Les paysages sont magnifiques.
+
+    Je vais vous peindre devant un superbe décor."""
+
+    carimall "Mouais."
+
+    "Elle ne paraissait pas très convaincue."
+
+    jump scene_7
+
+label scene_7:
+    """
+    William termina la première ébauche du tableau à peine avant l’aube.
+    """
+
+    carimall "C’est magnifique."
+
+    "Elle contemplait le tableau la représentant devant un ciel trop bleu pour être vrai."
+
+    carimall "J’aimerais tellement pouvoir sortir sous un tel soleil…"
+
+    william "As-tu essayé ?"
+
+    "Il s’était mis à la tutoyer dans le courant de la nuit."
+
+    carimall "Ne dis pas de bêtise."
+
+    "Sa réponse avait été sèche, et elle lui tourna le dos."
+
+    carimall "Je… je ne peux pas sortir en plein jour. Ça me tuerait."
+
+    william "Et rester là ?"
+
+    "Il s'alluma une cigarette."
+
+    william """
+    Tu ne crois pas que c’est aussi en train de te tuer ?
+
+    Tu appelles ça vivre, rester cloitrée dans ce vieux château ?"""
+
+    carimall """
+    J’irais où, de toute façon ?
+
+    Les gens du coin me détestent tous, maintenant.
+
+    Je suis un monstre, pour eux."""
+
+    william "Pourquoi ? Tu n’as pas grand-chose de monstrueux."
+
+    carimall "J’ai trop… changé pour eux, je suppose. Je…"
+
+    william "Tu pleures ?"
+
+    "L’artiste posa sa main sur l’épaule de la jeune femme."
+
+    carimall "Non !"
+
+    "Elle se retourna à nouveau, ignorant la larme de sang qui avait coulé sur sa joue."
+
+    william "Écoute…"
+
+    "Il essuya la larme de sang avec son doigt."
+
+    william """
+    Je ne connais pas vos voisins, mais le monde est grand.
+
+    Et il est plus beau à voir le jour.
+    """
+
+    "Carimall sourit et saisit le poignet du jeune homme, qui fit une moue mi-horrifiée, mi-interrogative tandis qu’elle léchait la larme rouge qui se trouvait sur son doigt."
 
 label fin:
     return
