@@ -1,4 +1,6 @@
-﻿define angele = Character('Angèle')
+﻿define config.window = "hide"
+
+define angele = Character('Angèle')
 define william = Character("William")
 define loup = Character("Loup")
 define carimall = Character("Carimall")
@@ -11,32 +13,33 @@ define inqui = Character("Inquisiteur")
 label start:
     scene black
     with fade
+
+    show text "Lizzie Crowdagger présente" with dissolve
+
+    $ renpy.pause(2.0)
+
+    show text "SORTIR DU CERCUEIL" with dissolve
+
+    $ renpy.pause(2.0)
+
+    scene black
+    with dissolve
+
     """
-    William fit un sourire crispé à la petite fille qui lui tirait la langue et tourna la tête vers la fenêtre de la diligence.
+    {a=call_in_new_context:william}William{/a} fit un sourire crispé à la petite fille qui lui tirait la langue et tourna la tête vers la fenêtre de la diligence.
 
     Le paysage de la Transye Vanille était magnifique, avec ses belles forêts enneigées et ses montagnes majestueuses ; mais il commençait à s’en lasser un peu.
 
-    William était un artiste dans le besoin, aussi avait-il accepté la proposition du comte d’Ekul, qui le payait grassement pour qu’il vienne dans son château dresser le portrait de sa fille.
+    William était un artiste dans le besoin, aussi avait-il accepté la proposition du comte d’Ekul, qui le payait grassement pour qu’il vienne dans son château dresser le portrait de {a=call_in_new_context:carimall}sa fille{/a}.
 
     Il n’avait juste pas réalisé que le voyage serait si long, que la diligence lui ferait si mal aux fesses, qu’il ne pourrait pas fumer pendant aussi longtemps et qu’il y aurait tant de monde à l’intérieur.
 
-    La voiture était en effet pleinement occupée : deux jeunes hommes bien habillés partageaient sa banquette, tandis qu’il faisait face à un couple hétérosexuel accompagné de leur petit monstre.
-
-    Ce n’était pas vraiment que William n’aimait pas les enfants : il les supportait tout à fait lorsqu’ils étaient suffisamment loin de lui, qu’ils restaient immobiles et se taisaient.
-
-    Non seulement la fille était à moins d’un mètre mais en plus elle avait l’affreuse tendance à faire des grimaces et à discuter.
-
-    Pire, elle lui avait même parlé directement, situation dont il s’était sorti en feignant de ne pas comprendre la langue locale.
+    La voiture était en effet pleinement occupée : {a=call_in_new_context:jeunes_hommes}deux jeunes hommes bien habillés{/a} partageaient sa banquette, tandis qu’il faisait face à un couple hétérosexuel accompagné de leur {a=call_in_new_context:petit_monstre}petit monstre{/a}.
 
     Il y avait aussi une septième passagère, qui, faute de place, avait la moitié du corps proprement à travers celui de son voisin.
 
-    Si Angèle pouvait se mettre dans cette position, c’était parce qu’elle n’existait pas vraiment et n’était qu’une hallucination de l’artiste.
+    Si Angèle pouvait se mettre dans cette position, c’était parce qu’elle n’existait pas vraiment et n’était qu’une {a=call_in_new_context:hallucation}hallucination{/a} de l’artiste.
 
-    Il avait tout fait pour que le phénomène cesse : arrêter de boire, boire beaucoup plus, prier et même se faire exorciser, mais rien n’y avait fait.
-
-    Ce n’était pas vraiment gênant lorsqu’il était seul, si ce n’est qu’elle lui tapait sur les nerfs.
-
-    Mais lorsqu’il était accompagné, il ne pouvait se permettre de lui répondre sans passer pour un fou et, comme Angèle ne se taisait pas pour autant, c’était une situation on ne peut plus frustrante.
 
     La diligence se mit enfin à ralentir, ce qui signifiait que le voyage touchait à sa fin.
 
@@ -44,14 +47,16 @@ label start:
 
     William espérait qu’il tiendrait parole : le soleil commençait à disparaître derrière l’horizon et il ne tenait pas à passer la nuit dans la forêt.
 
-    Alors que les chevaux s’arrêtaient, la mère de la petite fille lui attrapa le poignet et lui murmura quelques mots. William se contenta de hocher la tête et descendit de la voiture avec soulagement.
+    Alors que les chevaux s’arrêtaient, la mère de la petite fille lui attrapa le poignet et lui murmura quelques mots.
 
-    Tandis que le cocher expédiait sans ménagement les deux valises du jeune homme au sol, la femme continua de parler, avant de faire finalement un signe de croix au moment où la diligence repartait.
+    William se contenta de hocher la tête et descendit de la voiture avec soulagement.
+
+    Tandis que le cocher expédiait sans ménagement les deux valises du jeune homme au sol, la femme continua de parler, avant de faire finalement un signe de croix.
+
+    La diligence repartit.
     """
 
     angele "Qu'est-ce qu'elle disait ?"
-
-    nvl clear
 
     "William s'alluma une cigarette."
 
@@ -60,9 +65,7 @@ label start:
 
     De protéger mon cou, quelque chose comme ça.
 
-    {clear}
-
-    Et de buveur décent.
+    Et de {i}buveur décent{/i}.
 
     Mais il n’y a pas de problème, j’ai pensé à amener une bouteille, je sais que ce sont des choses qui se font.
     """ 
@@ -990,4 +993,19 @@ label epilogue:
     jump fin 
 
 label fin:
+    scene black with dissolve
+
+    show text "FIN" with dissolve
+
+    $ renpy.pause(2.0)
+    
+    show text "ECRITURE : LIZZIE CROWDAGGER" with dissolve
+
+    $ renpy.pause(2.0)
+    
+    show text "LICENCE : CC By-SA 4.0" with dissolve
+
+    $ renpy.pause(2.0)
+
+    
     return
