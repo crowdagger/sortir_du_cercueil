@@ -2,7 +2,10 @@
 define william = Character("William")
 define loup = Character("Loup")
 define carimall = Character("Carimall")
-define ekul = Character("Compte d'Ekul")
+define ekul = Character("Comte d'Ekul")
+define femme1 = Character("Femme mystérieuse")
+define femme2 = Character("Femme mystérieuse")
+define femme3 = Character("Femme mystérieuse")
 
 label start:
     scene black
@@ -218,6 +221,168 @@ label scene_2:
     william "Et votre fille ?"
 
     ekul "Oh, elle est repartie. Elle aime se promener la nuit. Venez, suivez-moi."
+
+    jump scene_3
+
+label scene_3:
+    scene black
+    with fade
+    
+    "Le comte d’Ekul fit s’asseoir son invité à une grande table où avait été servi un dîner copieux."
+
+    ekul "Excusez-moi de ne pas vous accompagner, mais j’ai déjà mangé."
+
+    william "Ce n’est pas grave."
+
+    "Le peintre se servit une aile de poulet."
+
+    william "Vu l’heure, je comprends."
+
+    "Il mangea en quantité, pendant que le comte lui posait des questions sur son voyage. Puis ce dernier l’invita à aller s’asseoir devant la cheminée."
+
+    william "Oh. Un instant."
+
+    "Il se dirigea vers ses valises et en sortit une bouteille de vin, qu’il apporta au comte."
+
+    william "Tenez, pour vous remercier de m’accueillir."
+
+    ekul "C’est très aimable à vous. Cependant, je ne bois pas… de vin."
+
+    william "Oh."
+
+    "Il s'assit."
+
+    william "Pardonnez-moi. Je l’ignorais."
+
+    "Le comte s’assit à son tour, fit tourner la bouteille, et écarquilla les yeux en lisant l’étiquette."
+
+    ekul "Cela dit, pour un petit Mondar de 1724, je crois que je pourrais faire une exception."
+
+    jump scene_4
+
+label scene_4:
+    scene black
+    with fade
+    "Le comte partagea ce qui restait de la bouteille entre son verre et celui de William. Tous deux étaient passablement éméchés."
+
+    william "Eh ben, Comte, pour quelqu’un qui ne boit pas… de vin, je trouve que vous êtes un buveur décent."
+
+    ekul "Non, mais quand je dis pas de vin, c’est surtout celui des péquenots du coin."
+
+    ekul "Vu le temps qu’on se trimballe, forcément… Je ne bois pas… de piquette, quoi."
+
+    william """
+    Vous faites bien, Comte.
+
+    Faut pas boire n’importe quoi, c’est ma devise."""
+
+    ekul "Mais parfois, nécessité fait loi."
+
+    "Le comte avait pris un air grave, incitant son invité à incliner la tête en approbation."
+
+    william """
+    ’videmment.
+
+    Mais dans ce cas…"""
+
+    "Il parut réfléchir pendant quelques secondes."
+
+    william """
+    Ça compte pas.
+
+    Bon. J’crois qu’j’vais aller roupiller."""
+
+    ekul """
+    Je vais vous montrer votre chambre.
+
+    Demain, vous pourrez dormir aussi tard que vous le voudrez. Je devrai m’absenter jusqu’en fin d’après-midi."""
+
+    william "Boulot, boulot, hein ?"
+
+    jump scene_5
+
+label scene_5:
+    scene black
+    with fade
+    "William se réveilla en grognant et se demanda où il était. Puis les évènements de la veille lui revinrent en mémoire et il comprit pourquoi il avait mal à la tête."
+
+    angele """C’est drôle.
+
+    Il n’y a pas grand-monde, dans cette baraque."""
+
+    william "Laisse-moi dormir…"
+
+    "Il se retourna dans le lit."
+
+    angele "Il est plus de midi !"
+
+    william "Et alors ? Le comte a dit qu’il rentrerait tard."
+
+    angele "Tu devrais aller explorer le château avant qu’il ne rentre !"
+
+    william "Quoi ? Et pourquoi je ferais ça ?"
+
+    angele "Ben, il y a peut-être des trucs de mystérieux ?"
+
+    william "Oh, ouais, super. Non, je crois que je vais continuer ma grasse mâtinée."
+
+    """
+    Le jeune homme se leva finalement vers cinq heures de l’après-midi et alla chercher de quoi manger, ce qui s’avéra plus difficile que prévu étant donné que le château était immense et qu’il n’avait que des souvenirs flous du chemin qu’il avait suivi pour arriver à sa chambre.
+
+    À un moment, il crut apercevoir Carimall dans un couloir et voulut aller la saluer, mais lorsqu’il suivit la jeune femme dans la chambre où elle était entrée, il n’y avait plus personne.
+    """
+
+    william "J’ai vraiment trop bu hier, moi."
+
+    """
+    Lorsqu’il se retourna, il réalisa qu’il n’était plus seul, mais face à trois jeunes femmes à la beauté envoûtante et aux vêtements élaborés quoique peu couvrants. Il décida qu’il avait dû confondre, de loin, l’une d’entre elles avec la fille du comte.
+
+    Les trois dames s’avancèrent vers William, qui recula d’un pas, et elles se parlèrent à l’oreille. Puis elles gloussèrent et le dévisagèrent."""
+
+    femme1 "Il est jeune et fort."
+
+    "Elle se lécha la lèvre d’un air trop sensuel au goût du jeune homme."
+    femme1 "À toutes trois il nous donnera un baiser."
+
+    """
+    Le jeune homme écarquilla les yeux d’un air horrifié, attrapa un coussin, l’envoya à la figure de celle qui avait prononcé la phrase et se fraya un passage à travers les femmes.
+
+Alors qu’il sortait de la pièce, il faillit percuter le comte d’Ekul, qui, lui, désirait apparemment y entrer.
+
+    Il semblait furieux.
+    """
+
+    ekul "Vous l’avez touché ?"
+
+    william """Non.
+
+    Mais il s’en est fallu de peu."""
+
+    "Le comte se tourna vers lui."
+
+    ekul "Eh bien, elles n’ont pas l’air de vous avoir fait beaucoup d’effet."
+
+    femme2 "C’est vrai, ça. C’est vexant."
+
+    william "Ben, ça aurait été trois beaux gars, j’aurais peut-être pas dit non… mais là, des femmes…"
+
+    ekul "Vous voulez dire que… ?"
+
+    "Le comte recula d’un pas."
+
+    william "Euh, ça va."
+
+    william "Sans vouloir vous vexer, Comte, j’ai dit des {i}beaux{/i} gars."
+
+    ekul "Oh."
+
+    "Le comte semblait plus rassuré que vexé."
+
+    ekul "Bien. Avez-vous mangé ?"
+
+    william "Non, d’ailleurs, si vous pouviez me montrer sur un plan où se trouve le salon…"
+
+    
 
 label fin:
     return
