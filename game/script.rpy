@@ -487,5 +487,149 @@ label scene_7:
 
     "Carimall sourit et saisit le poignet du jeune homme, qui fit une moue mi-horrifiée, mi-interrogative tandis qu’elle léchait la larme rouge qui se trouvait sur son doigt."
 
+    jump scene_8
+
+label scene_8:
+    scene black
+    with fade
+
+    """
+    Le soleil se levait sur un paysage effectivement magnifique qui plaisait beaucoup à William, surtout vu d’une des tours du château.
+
+    La vue plaisait beaucoup moins à Carimall, qui se tenait à l’abri du soleil derrière le renfoncement de la porte."""
+
+    carimall "Je… je ne peux pas…"
+
+    william "Bien sûr que si."
+
+    "Il lui attrapa la main."
+
+    william "C’est dans la tête. Je suis avec toi, d’accord ?"
+
+    carimall "Mais toi tu n’es pas… enfin…"
+
+    william "Ferme les yeux."
+
+    carimall "Ce n’est pas une bonne idée. S’il te plaît…"
+
+    william "Ferme les yeux."
+
+    """
+    La jeune femme obéit et abaissa ses paupières, pendant que l’artiste la tirait vers la lumière.
+
+    Alors qu’elle s’avançait, deux nouvelles larmes rouges coulèrent sur ses yeux.
+
+    William s’avança encore de deux pas avant de se retourner. Il vit alors la fumée qui se dégageait du visage de la jeune femme et se demanda s’il n’avait pas fait une erreur en amenant la fille de son hôte en plein jour.
+    """
+
+    jump scene_9
+
+label scene_9:
+    scene black
+    with fade
+
+    """
+    Le comte d’Ekul se retourna dans son cercueil et réalisa que quelque chose ne tournait pas rond.
+
+    Il retira le couvercle de ce qui lui servait de lit, s’assit et tourna la tête d’un côté, puis de l’autre.
+
+    Il réalisa alors que sa fille n’était pas là et en fut contrarié.
+    """
+
+    jump scene_10
+
+label scene_10:
+    scene black
+    with fade
+    
+    carimall "C’est… magnifique…"
+
+    """
+    Carimall était ébahie par le lever de soleil auquel elle n’avait pour l’heure jamais eu droit.
+
+    William la regardait, un peu moins inquiet que quelques minutes plus tôt. Elle avait toujours le visage rouge, mais il n’y avait plus de fumée et la brûlure n’avait l’air que superficielle.
+    """
+
+    carimall "Merci."
+
+    "Elle serra plus fort la main du jeune homme qu’elle tenait toujours. Il y eut alors un moment magique tandis qu’ils restaient silencieux, contemplant le paysage qui s’ensoleillait peu à peu."
+
+    carimall """
+    Tu sais…
+
+    J’ai eu pas mal de changements dans ma vie ces derniers temps."""
+
+    william "Je sais. Ça ne doit pas être facile."
+
+    carimall """Pas tout le temps, non.
+
+    Je…
+
+    Est-ce que tu me vois comme un monstre ?"""
+
+    william """
+    Non !
+
+    Bien sûr que non. Je te l’ai dit…"""
+
+    carimall "Mais tu ne sais pas ce que je suis réellement…"
+
+    william "Je m’en moque. Ce n’est pas ça qui…"
+
+    ekul "BORDEL DE DIEU D’ARTISTE DÉBILE !" with vpunch
+
+    "William se retourna et réalisa que le comte d'Ekul se tenait derrière eux, protégé du soleil par le battant de la porte."
+
+    william "Hum. Peut-être que tu ferais mieux de rentrer."
+
+    carimall "Oui. On poursuivra cette discussion ce soir."
+
+    "Le peintre regarda la jeune femme rentrer vers l’ombre protectrice du château, puis fit de même quelques instants plus tard."
+
+    "Il fut alors plaqué contre le mur par le comte, qui commença à lui serrer la gorge." with vpunch
+
+    ekul "Je devrais vous tuer, espèce de crétin !"
+
+    william "Vous dites ça sur…. le coup de la colère, Comte."
+
+    ekul "Vous auriez pu la tuer, espèce de taré !"
+
+    william "Je ne crois… pas…"
+
+    ekul "Vous n’avez aucune idée de ce qu’elle est !"
+
+    william "Vous… réalisez… peux… pas… respirer ?"
+
+    ekul "Vous n’avez aucune idée de ce qu’elle est."
+
+    "Le comte d'Ekul relâcha le peintre. William s’écroula par terre."
+
+    ekul "Si vous lui faites du mal, croyez-moi, je vous le ferai payer cher."
+
+    "Le jeune homme essaya péniblement de reprendre sa respiration pendant que son hôte s’éloignait."
+
+    angele "Il a de la poigne, ce type."
+
+    "William se releva avec difficulté."
+
+    william "Ouais."
+
+    angele "« Vous n’avez aucune idée ce qu’elle est », Non mais, tu l’as entendu ?"
+
+    william "Ouais."
+
+    angele "Elle ne sort pas au soleil, elle a la peau blanche, elle chiale des larmes de sang et on devrait ne pas se douter que c’est une vampire ?"
+
+    william """
+    C’est une sorte de tradition, je suppose.
+
+    Je pense que je serais mal vu si je ne faisais pas celui qui ne sait pas."""
+
+    angele "Par contre, je pense qu’au moins Carimall fait semblant de ne pas voir que tu fais semblant de ne pas voir qu’elle est une vampire."
+
+    william """Je ne sais pas.
+
+    Mais je crois que je vais aller me coucher. Tes raisonnements me filent mal au crâne."""
+
 label fin:
     return
