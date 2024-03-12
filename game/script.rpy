@@ -927,5 +927,67 @@ label scene_13:
 
     Je veux dire, t’es comme, genre, ma mère vampirique, non ?"""
 
+    jump epilogue
+
+label epilogue:
+    scene black
+    with fade
+
+    """
+    William décida, en allumant un de ces énormes cigares dont lui avait fait cadeau le comte pour le remercier de sa visite, que le voyage de retour s’annonçait plus sympathique que celui de l’aller.
+
+    Déjà, son hallucination, bien que toujours présente, se taisait, et c’était quelque chose qui était assez rare pour qu’il prenne la peine d’en profiter pleinement.
+
+    Mais surtout, la voiture était, étonnamment, beaucoup moins remplie qu’à l’aller.
+
+    En face de lui, il n’y avait que Carimall, terriblement nerveuse à l’idée de quitter sa terre natale pour la première fois.
+
+    Il y avait eu du monde au départ de la diligence, pourtant.
+
+    Mais lorsqu’il avait répondu au sourire d’une vieille femme repoussante en souriant à son tour de toutes ses dents, elle avait marmonné quelques mots tous bas et tous les voyageurs s’étaient soudainement souvenus qu’ils avaient des choses bien plus importantes à faire qu’accomplir un voyage.
+
+    Comme quoi, décida le vampire, il ne fallait jamais négliger les vertus d’un simple sourire."""
+
+    william "Ça va ?"
+
+    """
+    Carimall regardait par la fenêtre la silhouette du château disparaitre.
+
+    Même s’il n’y aurait pas de belle et éternelle histoire d’amour entre eux, il l’avait convaincue de l’accompagner, au moins pendant un moment.
+
+    Elle ne pouvait pas rester enfermée à jamais dans un cercueil à fuir les rayons du soleil.
+    
+    Enfin, techniquement, elle pouvait.
+
+    Mais le jeune homme voulait lui montrer qu’elle pouvait aussi faire {i}autrement{/i}.
+    """
+
+    carimall """Je crois que ça va aller.
+
+    J’ai juste un peu peur."""
+
+    william "J’imagine. Tu voulais aller quelque part en particulier ?"
+
+    carimall "Non. Loin."
+
+    william "Je dois te prévenir… Dans le vaste monde, il est possible que tout le monde ne t’accepte pas comme tu es."
+
+    carimall "Je sais. Grâce à l’évêque, je suis parée."
+    
+    william "Tu veux dire qu’il t’a fait comprendre ce que pouvait être l’intolérance ?"
+
+    "Carimall sourit."
+
+    carimall """
+    Oh, non.
+
+    Je veux dire que j’ai récupéré son arbalète et son épée."""
+
+    """William hocha la tête et décida que le comte avait sans doute eu tort de s’inquiéter pour l’avenir de sa fille.
+
+    Elle n’avait peut-être pas une grande expérience du monde, mais elle avait apparemment déjà compris comment il fonctionnait."""
+
+    jump fin 
+
 label fin:
     return
