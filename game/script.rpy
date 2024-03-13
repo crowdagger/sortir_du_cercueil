@@ -74,7 +74,7 @@ label start:
 
     De protéger mon cou, quelque chose comme ça.
 
-    Et de {i}buveur décent{/i}.
+    Et une histoire de {i}buveur décent{/i}.
 
     Mais il n’y a pas de problème, j’ai pensé à amener une bouteille, je sais que ce sont des choses qui se font.
     """ 
@@ -124,7 +124,11 @@ label start:
 
     play music "last_encounter.mp3" fadein 1.0 fadeout 1.0 volume 0.5
 
-    "William se retourna lentement et aperçut effectivement un animal qui le fixait de son regard jaune. Puis il en vit un autre sortir d’un fourré voisin."
+    """
+    William se retourna lentement et aperçut effectivement un animal qui le fixait de son regard jaune.
+
+    Puis il en vit un autre sortir d’un fourré voisin.
+    """
 
     william "Bon sang, combien ils sont ?"
 
@@ -150,14 +154,18 @@ label start:
 
     angele "Ben, refait ou pas, t’es dans la merde."
 
-    "William haussa les épaules et essaya de s’approcher doucement d’un arbre. Il n’était pas très doué en escalade mais, s’il apprenait vite, il avait peut-être une chance de s’en sortir vivant."
+    """
+    William haussa les épaules et essaya de s’approcher doucement d’un arbre.
+
+    Il n’était pas très doué en escalade mais, s’il apprenait vite, il avait peut-être une chance de s’en sortir vivant.
+    """
 
     angele "Quelqu’un approche."
 
     """
     William stoppa net, décidant que si quelqu’un arrivait pour le sauver du pétrin il valait mieux pour son prestige qu’il ne soit pas en train d’essayer de grimper de manière ridicule.
 
-    Les loups faisaient des cercles autour de lui en se léchant les babines ; puis, subitement, ils tournèrent la tête vers le chemin et prirent la fuite.""""
+    Les loups faisaient des cercles autour de lui en se léchant les babines ; puis, subitement, ils tournèrent la tête vers le chemin et prirent la fuite."""
 
     play music "piano_loop.mp3" fadein 1.0 fadeout 1.0 
 
@@ -225,7 +233,11 @@ label scene_2:
     play music "chaos_castle.mp3" fadeout 1.0 fadein 1.0 volume 0.5
 
    
-    "Le comte d’Ekul attendait sur le pas de la porte. C’était un homme de taille moyenne et de forte corpulence, aux cheveux noirs épais et broussailleux, qui avait quelque chose d’un peu effrayant dans le regard."
+    """
+    Le comte d’Ekul attendait sur le pas de la porte.
+
+    C’était un homme de taille moyenne et de forte corpulence, aux cheveux noirs épais et broussailleux, qui avait quelque chose d’un peu effrayant dans le regard.
+    """
 
     ekul """Bienvenue dans ma demeure !
 
@@ -235,7 +247,11 @@ label scene_2:
 
     "William marmonnait trop bas pour que son interlocuteur l’entende."
 
-    ekul "Bienvenue dans ma demeure ! Entrez-y librement, et laissez un peu de la joie que vous y apportez !"
+    ekul """
+    Bienvenue dans ma demeure !
+
+    Entrez-y librement, et laissez un peu de la joie que vous y apportez !
+    """
 
     angele "Faudrait voir à changer de disque."
 
@@ -245,7 +261,11 @@ label scene_2:
 
     ekul "Venez. Vous devez mourir de faim. Je vais prendre vos bagages."
 
-    "Le jeune homme n’eut pas le temps de protester, car l’homme s’était déjà emparé des deux valises. Le cocher était occupé à détacher les chevaux, tandis que Carimall avait disparu."
+    """
+    Le jeune homme n’eut pas le temps de protester, car l’homme s’était déjà emparé des deux valises.
+
+    Le cocher était occupé à détacher les chevaux, tandis que Carimall avait disparu.
+    """
 
     william "Et votre fille ?"
 
@@ -267,7 +287,11 @@ label scene_3:
 
     william "Vu l’heure, je comprends."
 
-    "Il mangea en quantité, pendant que le comte lui posait des questions sur son voyage. Puis ce dernier l’invita à aller s’asseoir devant la cheminée."
+    """
+    Il mangea en quantité, pendant que le comte lui posait des questions sur son voyage.
+
+    Puis ce dernier l’invita à aller s’asseoir devant la cheminée.
+    """
 
     william "Oh. Un instant."
 
@@ -292,7 +316,10 @@ label scene_3:
 label scene_4:
     scene black
     with fade
-    "Le comte partagea ce qui restait de la bouteille entre son verre et celui de William. Tous deux étaient passablement éméchés."
+    """
+    Le comte partagea ce qui restait de la bouteille entre son verre et celui de William.
+
+    Tous deux étaient passablement éméchés."""
 
     william "Eh ben, Comte, pour quelqu’un qui ne boit pas… de vin, je trouve que vous êtes un buveur décent."
 
@@ -324,7 +351,9 @@ label scene_4:
     ekul """
     Je vais vous montrer votre chambre.
 
-    Demain, vous pourrez dormir aussi tard que vous le voudrez. Je devrai m’absenter jusqu’en fin d’après-midi."""
+    Demain, vous pourrez dormir aussi tard que vous le voudrez.
+
+    Je devrai m’absenter jusqu’en fin d’après-midi."""
 
     william "Boulot, boulot, hein ?"
 
@@ -333,7 +362,10 @@ label scene_4:
 label scene_5:
     scene black
     with fade
-    "William se réveilla en grognant et se demanda où il était. Puis les évènements de la veille lui revinrent en mémoire et il comprit pourquoi il avait mal à la tête."
+    """
+    William se réveilla en grognant et se demanda où il était.
+
+    Puis les évènements de la veille lui revinrent en mémoire et il comprit pourquoi il avait mal à la tête."""
 
     angele """C’est drôle.
 
@@ -364,13 +396,18 @@ label scene_5:
     william "J’ai vraiment trop bu hier, moi."
 
     """
-    Lorsqu’il se retourna, il réalisa qu’il n’était plus seul, mais face à trois jeunes femmes à la beauté envoûtante et aux vêtements élaborés quoique peu couvrants. Il décida qu’il avait dû confondre, de loin, l’une d’entre elles avec la fille du comte.
+    Lorsqu’il se retourna, il réalisa qu’il n’était plus seul, mais face à trois jeunes femmes à la beauté envoûtante et aux vêtements élaborés quoique peu couvrants.
 
-    Les trois dames s’avancèrent vers William, qui recula d’un pas, et elles se parlèrent à l’oreille. Puis elles gloussèrent et le dévisagèrent."""
+    Il décida qu’il avait dû confondre, de loin, l’une d’entre elles avec la fille du comte.
+
+    Les trois dames s’avancèrent vers William, qui recula d’un pas, et elles se parlèrent à l’oreille.
+
+    Puis elles gloussèrent et le dévisagèrent."""
 
     femme1 "Il est jeune et fort."
 
     "Elle se lécha la lèvre d’un air trop sensuel au goût du jeune homme."
+
     femme1 "À toutes trois il nous donnera un baiser."
 
     """
@@ -422,7 +459,9 @@ label scene_6:
     """
     William fut une nouvelle fois le seul à dîner, même si le comte et Carimall discutaient à côté de lui pendant qu’il mangeait.
 
-Ensuite, il suivit la jeune femme pour commencer à peindre son portrait. Elle posa de manière très conventionnelle, mais eut simplement une requête étrange :
+    Ensuite, il suivit la jeune femme pour commencer à peindre son portrait.
+
+    Elle posa de manière très conventionnelle, mais eut simplement une requête étrange :
     """
 
     carimall "Je pose à l’intérieur, mais est-ce que vous pourriez dessiner un ciel bleu derrière moi ?"
@@ -440,7 +479,9 @@ Ensuite, il suivit la jeune femme pour commencer à peindre son portrait. Elle p
 
     S’il vous plaît ? Vous comprenez ?
 
-    J’ai des problèmes de peau. Le soleil me donne d’affreuses rougeurs… qu’au moins sur un portrait je puisse y avoir droit."""
+    J’ai des problèmes de peau.
+
+    Le soleil me donne d’affreuses rougeurs… qu’au moins sur un portrait je puisse y avoir droit."""
 
     william "Cela doit être dur."
 
@@ -550,7 +591,9 @@ label scene_8:
 
     Alors qu’elle s’avançait, deux nouvelles larmes rouges coulèrent sur ses yeux.
 
-    William s’avança encore de deux pas avant de se retourner. Il vit alors la fumée qui se dégageait du visage de la jeune femme et se demanda s’il n’avait pas fait une erreur en amenant la fille de son hôte en plein jour.
+    William s’avança encore de deux pas avant de se retourner.
+
+    Il vit alors la fumée qui se dégageait du visage de la jeune femme et se demanda s’il n’avait pas fait une erreur en amenant la fille de son hôte en plein jour.
     """
 
     jump scene_9
@@ -578,12 +621,16 @@ label scene_10:
     """
     Carimall était ébahie par le lever de soleil auquel elle n’avait pour l’heure jamais eu droit.
 
-    William la regardait, un peu moins inquiet que quelques minutes plus tôt. Elle avait toujours le visage rouge, mais il n’y avait plus de fumée et la brûlure n’avait l’air que superficielle.
+    William la regardait, un peu moins inquiet que quelques minutes plus tôt.
+
+    Elle avait toujours le visage rouge, mais il n’y avait plus de fumée et la brûlure n’avait l’air que superficielle.
     """
 
     carimall "Merci."
 
-    "Elle serra plus fort la main du jeune homme qu’elle tenait toujours. Il y eut alors un moment magique tandis qu’ils restaient silencieux, contemplant le paysage qui s’ensoleillait peu à peu."
+    "Elle serra plus fort la main du jeune homme qu’elle tenait toujours.
+
+    Il y eut alors un moment magique tandis qu’ils restaient silencieux, contemplant le paysage qui s’ensoleillait peu à peu."
 
     carimall """
     Tu sais…
@@ -723,7 +770,9 @@ label scene_12:
 
     Mais celui-ci parvint à plonger un pieu dans son corps et Ekul s’écroula, pendant que sa fille prenait la fuite, suivie des trois femmes que William avait croisées la veille.
 
-    Le soldat n’eut cependant pas le temps de se glorifier de son acte, puisqu’il reçut un carreau en pleine tête et mourut aussitôt. Les regards des deux hommes restants se tournèrent vers le peintre."""
+    Le soldat n’eut cependant pas le temps de se glorifier de son acte, puisqu’il reçut un carreau en pleine tête et mourut aussitôt.
+
+    Les regards des deux hommes restants se tournèrent vers le peintre."""
 
     inqui "Qu’avez-vous fait, sombre idiot ?"
 
@@ -763,7 +812,9 @@ label scene_12:
     angele "Je crois que tu aurais dû arrêter le tabac."
 
     """
-    William, en effet, s’épuisait en courant dans les escaliers. Heureusement pour lui, l’évêque n’avait pas un meilleur souffle que lui et il commença à perdre du terrain à partir du quatrième étage.
+    William, en effet, s’épuisait en courant dans les escaliers.
+
+    Heureusement pour lui, l’évêque n’avait pas un meilleur souffle que lui et il commença à perdre du terrain à partir du quatrième étage.
     """
 
     angele "Au fait, tu sais où tu vas ?"
@@ -840,7 +891,9 @@ label scene_12:
 
     Il parvint néanmoins à se rattraper de justesse à une fissure et se dégagea du jeune homme qui lui tenait la jambe, l’envoyant mourir loin en contrebas.
 
-    Il allait remonter lorsqu’il réalisa que quelqu’un s’était mis debout sur le muret. Levant la tête, il aperçut une femme aux jambes d’autant plus impressionnantes qu’il était situé en dessous."""
+    Il allait remonter lorsqu’il réalisa que quelqu’un s’était mis debout sur le muret.
+
+    Levant la tête, il aperçut une femme aux jambes d’autant plus impressionnantes qu’il était situé en dessous."""
 
     carimall """
     C’est les chaussures à talon.
