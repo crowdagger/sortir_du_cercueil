@@ -1322,8 +1322,8 @@ style notify_text:
 
 
 screen nvl(dialogue, items=None):
-    frame:
-#        style "nvl_content_frame"
+    window:
+        style "nvl_window"
         background None
 
         viewport:
@@ -1346,9 +1346,7 @@ screen nvl(dialogue, items=None):
 
 
 screen nvl_dialogue(dialogue):
-
     for d in dialogue:
-
         window:
             id d.window_id
 

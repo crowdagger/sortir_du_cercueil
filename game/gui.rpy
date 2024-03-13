@@ -383,7 +383,7 @@ define gui.history_text_xalign = 0.0
 ## mêmes en mode NVL.
 
 ## Les bordures de l’arrière-plan de la fenêtre en mode NVL.
-define gui.nvl_borders = Borders(0, 10, 0, 20)
+define gui.nvl_borders = Borders(0, 40, 0, 70)
 
 ## Le nombre maximum d'entrées en mode NVL que Ren'Py affichera. Quand plus
 ## d'entrées sont affichées, les plus anciennes seront retirées.
