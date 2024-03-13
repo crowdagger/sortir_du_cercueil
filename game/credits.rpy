@@ -1,5 +1,7 @@
 label credits:
     scene black with dissolve
+
+    play music "no_joke_is_all_that_counts.mp3" fadein 1.0 fadeout 1.0 
     show text "ÉCRITURE : LIZZIE CROWDAGGER" with dissolve
 
     $ renpy.pause(2.0)

@@ -388,9 +388,15 @@ label scene_5:
     william "Oh, ouais, super. Non, je crois que je vais continuer ma grasse mâtinée."
 
     """
-    Le jeune homme se leva finalement vers cinq heures de l’après-midi et alla chercher de quoi manger, ce qui s’avéra plus difficile que prévu étant donné que le château était immense et qu’il n’avait que des souvenirs flous du chemin qu’il avait suivi pour arriver à sa chambre.
+    Le jeune homme se leva finalement vers cinq heures de l’après-midi et alla chercher de quoi manger.
 
-    À un moment, il crut apercevoir Carimall dans un couloir et voulut aller la saluer, mais lorsqu’il suivit la jeune femme dans la chambre où elle était entrée, il n’y avait plus personne.
+    Cela s’avéra plus difficile que prévu car le château était immense.
+
+    Par ailleurs, William n’avait que des souvenirs flous du chemin qu’il avait suivi pour arriver à sa chambre.
+
+    À un moment, il crut apercevoir Carimall dans un couloir et voulut aller la saluer.
+
+    Mais lorsqu’il suivit la jeune femme dans la chambre où elle était entrée, il n’y avait plus personne.
     """
 
     william "J’ai vraiment trop bu hier, moi."
@@ -628,9 +634,10 @@ label scene_10:
 
     carimall "Merci."
 
-    "Elle serra plus fort la main du jeune homme qu’elle tenait toujours.
+    """Elle serra plus fort la main du jeune homme qu’elle tenait toujours.
 
-    Il y eut alors un moment magique tandis qu’ils restaient silencieux, contemplant le paysage qui s’ensoleillait peu à peu."
+    Il y eut alors un moment magique tandis qu’ils restaient silencieux, contemplant le paysage qui s’ensoleillait peu à peu.
+    """
 
     carimall """
     Tu sais…
@@ -653,6 +660,8 @@ label scene_10:
     carimall "Mais tu ne sais pas ce que je suis réellement…"
 
     william "Je m’en moque. Ce n’est pas ça qui…"
+
+    play music "rivals_theme.mp3" fadein 1.0 fadeout 1.0 volume 0.5
 
     ekul "BORDEL DE DIEU D’ARTISTE DÉBILE !" with vpunch
 
@@ -916,6 +925,8 @@ label scene_13:
     scene black
     with fade
 
+    play music "decisions.mp3" fadeout 1.0 fadein 1.0 volume 0.5
+
     """
     William sentait son esprit commencer à flotter au-dessus de son corps dans un état extatique qui ne peut d’ordinaire être atteint qu’après avoir consommé quantité de substances illicites.
 
@@ -978,6 +989,8 @@ label scene_13:
 
     "William écarquilla les yeux de surprise."
 
+    play music "oops.ogg" fadein 1.0 fadeout 1.0 loop
+
     william "QUOI ?" with vpunch
 
     william """Tu veux dire qu’il y a des bébés vampires ?
@@ -1020,6 +1033,8 @@ label scene_13:
 label epilogue:
     scene black
     with fade
+
+    play music "oga_a_second_a_day_from_birth.mp3" fadein 1.0 fadeout 1.0 
 
     """
     William décida, en allumant un de ces énormes cigares dont lui avait fait cadeau le comte pour le remercier de sa visite, que le voyage de retour s’annonçait plus sympathique que celui de l’aller.

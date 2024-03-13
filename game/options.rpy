@@ -55,10 +55,19 @@ Chaos Castle : {a=https://opengameart.org/content/chaos-castle}FoxSynergy{/a} (C
 
 Vampire's Piano : {a=https://opengameart.org/content/vampires-piano}TAD{/a} (CC0)
 
+Rival's theme : {a=https://opengameart.org/content/rivals-theme}Bobjt{/a} (CC-By)
 
 {a=https://opengameart.org/content/dream-raid-cinematic-action-soundtrackDream Raid{/a} : {a=http://www.matthewpablo.com}Matthew Pablo{/a} (CC-By)
 
 {a=https://opengameart.org/content/colossal-boss-battle-theme}Blackmoore Colossus{/a} : {a= http://www.matthewpablo.com}Matthew Pablo{/a} (CC-By)
+
+Decisions : {a=https://opengameart.org/content/decisions-1}FrancisLeeMusic{/a} (CC-By)
+
+Oops : {a=https://opengameart.org/content/oops}Alexandr Zhelanov{/a} (CC-By)
+
+{a=https://opengameart.org/content/funny-and-cute-acoustic-ending-theme}A second a day from birth{/a} : {a=https://airyluvs.com/}SOUND AIRYLUVS by ISAo{/a} (OGA-By)
+
+{a=https://opengameart.org/content/no-joke-is-all-that-counts}No Joke is All That Counts{/a} : {a=https://www.patreon.com/Snabisch}Snabisch{/a} (CC-By)
 
 
 
