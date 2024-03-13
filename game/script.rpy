@@ -14,6 +14,8 @@ label start:
     scene black
     with fade
 
+    play music "dark_quest.ogg" fadein 1.0 fadeout 1.0 volume 0.5
+
     show text "Lizzie Crowdagger présente" with dissolve
 
     $ renpy.pause(2.0)
@@ -25,9 +27,12 @@ label start:
     scene black
     with dissolve
 
-    """
-    {a=call_in_new_context:william}William{/a} fit un sourire crispé à la petite fille qui lui tirait la langue et tourna la tête vers la fenêtre de la diligence.
+    $ renpy.pause(2.0)
 
+    "
+    {a=call_in_new_context:william}William{/a} fit un sourire crispé à la petite fille qui lui tirait la langue et tourna la tête vers la fenêtre de la diligence." with dissolve
+
+    """
     Le paysage de la Transye Vanille était magnifique, avec ses belles forêts enneigées et ses montagnes majestueuses ; mais il commençait à s’en lasser un peu.
 
     William était un artiste dans le besoin, aussi avait-il accepté la proposition du comte d’Ekul, qui le payait grassement pour qu’il vienne dans son château dresser le portrait de {a=call_in_new_context:carimall}sa fille{/a}.
@@ -38,7 +43,7 @@ label start:
 
     Il y avait aussi une septième passagère, qui, faute de place, avait la moitié du corps proprement à travers celui de son voisin.
 
-    Si Angèle pouvait se mettre dans cette position, c’était parce qu’elle n’existait pas vraiment et n’était qu’une {a=call_in_new_context:hallucation}hallucination{/a} de l’artiste.
+    Si Angèle pouvait se mettre dans cette position, c’était parce qu’elle n’existait pas vraiment et n’était qu’une {a=call_in_new_context:hallucination}hallucination{/a} de l’artiste.
 
 
     La diligence se mit enfin à ralentir, ce qui signifiait que le voyage touchait à sa fin.
@@ -47,9 +52,11 @@ label start:
 
     William espérait qu’il tiendrait parole : le soleil commençait à disparaître derrière l’horizon et il ne tenait pas à passer la nuit dans la forêt.
 
-    Alors que les chevaux s’arrêtaient, la mère de la petite fille lui attrapa le poignet et lui murmura quelques mots.
+    Alors que les chevaux s’arrêtaient, la mère de la petite fille lui attrapa le poignet et lui murmura quelques mots."""
 
-    William se contenta de hocher la tête et descendit de la voiture avec soulagement.
+    play music "vent.mp3" fadein 1.0 fadeout 1.0
+
+    """William se contenta de hocher la tête et descendit de la voiture avec soulagement.
 
     Tandis que le cocher expédiait sans ménagement les deux valises du jeune homme au sol, la femme continua de parler, avant de faire finalement un signe de croix.
 
@@ -58,6 +65,8 @@ label start:
 
     angele "Qu'est-ce qu'elle disait ?"
 
+    play sound "cigarette.mp3" fadein 0.5 fadeout 0.5
+    
     "William s'alluma une cigarette."
 
     william """
@@ -75,7 +84,9 @@ label start:
     """ 
 
     william """
-    Elle a aussi dit quelque chose… que les choses là-bas n’étaient pas ce qu’elles semblaient être et que le mal était caché là où on ne le soupçonnait pas.
+    Elle a aussi dit quelque chose…
+
+    Que les choses là-bas n’étaient pas ce qu’elles semblaient être et que le mal était caché là où on ne le soupçonnait pas.
     """ 
 
     angele "Heureusement que tu aimes bien les mâles, alors." 
@@ -83,11 +94,13 @@ label start:
     william """
     Ha, ha.
 
-    Bon, j’espère qu’on ne va pas attendre trop longtemps, on se les gèle"""
+    Bon, j’espère qu’on ne va pas attendre trop longtemps, on se les gèle."""
 
     angele "Moi, je trouve que ça va."
 
     william "Toi tu n’existes…"
+
+    play sound "loup.mp3"
 
     loup "AHOUUUUU !!!!" (multiple=2)
 
@@ -108,6 +121,8 @@ label start:
     william "Ah."
 
     angele "Par contre, il y en a un derrière toi."
+
+    play music "last_encounter.mp3" fadein 1.0 fadeout 1.0 volume 0.5
 
     "William se retourna lentement et aperçut effectivement un animal qui le fixait de son regard jaune. Puis il en vit un autre sortir d’un fourré voisin."
 
@@ -142,9 +157,16 @@ label start:
     """
     William stoppa net, décidant que si quelqu’un arrivait pour le sauver du pétrin il valait mieux pour son prestige qu’il ne soit pas en train d’essayer de grimper de manière ridicule.
 
-    Les loups faisaient des cercles autour de lui en se léchant les babines ; puis, subitement, ils tournèrent la tête vers le chemin et prirent la fuite.
+    Les loups faisaient des cercles autour de lui en se léchant les babines ; puis, subitement, ils tournèrent la tête vers le chemin et prirent la fuite.""""
 
-    William tourna la tête à son tour en fronçant les sourcils et aperçut une jeune femme en robe rouge. Elle était grande, avait les cheveux noirs, la peau parfaitement blanche et les yeux verts. Globalement, elle était irréellement magnifique.
+    play music "piano_loop.mp3" fadein 1.0 fadeout 1.0 
+
+    """
+    William tourna la tête à son tour en fronçant les sourcils et aperçut une jeune femme en robe rouge.
+
+    Elle était grande, avait les cheveux noirs, la peau parfaitement blanche et les yeux verts.
+
+    Globalement, elle était irréellement magnifique.
     """
 
     william "Euh…"
@@ -199,6 +221,9 @@ label scene_1:
 label scene_2:
     scene black
     with fade
+
+    play music "chaos_castle.mp3" fadeout 1.0 fadein 1.0 volume 0.5
+
    
     "Le comte d’Ekul attendait sur le pas de la porte. C’était un homme de taille moyenne et de forte corpulence, aux cheveux noirs épais et broussailleux, qui avait quelque chose d’un peu effrayant dans le regard."
 
@@ -391,6 +416,8 @@ Alors qu’il sortait de la pièce, il faillit percuter le comte d’Ekul, qui, 
 label scene_6:
     scene black
     with fade
+
+    play music "vampires_piano.mp3" fadein 1.0 fadeout 1.0 volume 0.5
 
     """
     William fut une nouvelle fois le seul à dîner, même si le comte et Carimall discutaient à côté de lui pendant qu’il mangeait.
@@ -663,6 +690,9 @@ label scene_12:
     scene black
     with fade
 
+    play music "dream_raid.mp3" fadein 1.0 fadeout 1.0 volume 0.5
+
+
     """
     William se précipita dans le hall d’entrée et arriva en plein milieu d’une bagarre générale.
 
@@ -712,6 +742,8 @@ label scene_12:
     william "Il aurait fallu que je sois aveugle pour ne pas le réaliser plus tôt."
 
     inqui "Impie ! Hérétique !"
+
+    play music "blackmoor_colossus.mp3" fadein 1.0 fadeout 1.0 volume 0.5
 
     """Il dégaina son épée et chargea.
 
@@ -998,14 +1030,6 @@ label fin:
     show text "FIN" with dissolve
 
     $ renpy.pause(2.0)
-    
-    show text "ECRITURE : LIZZIE CROWDAGGER" with dissolve
 
-    $ renpy.pause(2.0)
+    jump credits 
     
-    show text "LICENCE : CC By-SA 4.0" with dissolve
-
-    $ renpy.pause(2.0)
-
-    
-    return

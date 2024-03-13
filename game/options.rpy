@@ -26,13 +26,49 @@ define gui.show_name = True
 
 ## La version du jeu.
 
-define config.version = "1.0"
+define config.version = "0.1"
 
 
 ## Texte placé sur l'écran "À propos" du jeu. Placez le texte entre triples
 ## guillemets, et laissez une ligne entre les paragraphes.
 
 define gui.about = _p("""
+LICENCE
+
+Creative Commons By-SA 4.0
+
+
+ÉCRITURE
+
+{a=https://crowdagger.fr}Lizzie Crowdagger{/a}
+
+
+MUSIQUES
+
+Dark Quest : {a=https://opengameart.org/content/dark-quest}Alexandr Zhelanov{/a} (CC-By)
+
+{a=https://opengameart.org/content/rpg-battle-theme-the-last-encounter-0}The Last Encounter{/a} : {a=http://www.matthewpablo.com}Matthew Pablo{/a} (CC-By)
+
+Piano Loop : {a=https://opengameart.org/content/emotional-piano-loop}Extenz{/a} (CC0)
+
+Chaos Castle : {a=https://opengameart.org/content/chaos-castle}FoxSynergy{/a} (CC-By)
+
+Vampire's Piano : {a=https://opengameart.org/content/vampires-piano}TAD{/a} (CC0)
+
+
+{a=https://opengameart.org/content/dream-raid-cinematic-action-soundtrackDream Raid{/a} : {a=http://www.matthewpablo.com}Matthew Pablo{/a} (CC-By)
+
+{a=https://opengameart.org/content/colossal-boss-battle-theme}Blackmoore Colossus{/a} : {a= http://www.matthewpablo.com}Matthew Pablo{/a} (CC-By)
+
+
+
+SONS
+
+Vent : {a=https://opengameart.org/content/wind1}Luke.RUSTLTD{/a} (CC0)
+
+Cigarette : {a=https://freesound.org/people/AldebaranCW/sounds/453082/}AldebaranCW{/a} (CC0, raccourci)
+
+Loup : {a=https://freesound.org/people/sandboks/sounds/503516/}Sandboks{/a} (CC0, raccourci)
 """)
 
 
