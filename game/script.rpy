@@ -1,14 +1,18 @@
 ﻿define config.window = "hide"
 
-define angele = Character('Angèle')
-define william = Character("William")
-define loup = Character("Loup")
-define carimall = Character("Carimall")
-define ekul = Character("Comte d'Ekul")
-define femme1 = Character("Femme mystérieuse")
-define femme2 = Character("Femme mystérieuse")
-define femme3 = Character("Femme mystérieuse")
-define inqui = Character("Inquisiteur")
+define default_kind = nvl
+
+
+define angele = Character('Angèle', kind=default_kind)
+define william = Character("William", kind=default_kind)
+define loup = Character("Loup", kind=default_kind)
+define carimall = Character("Carimall", kind=default_kind)
+define ekul = Character("Comte d'Ekul", kind=default_kind)
+define femme1 = Character("Femme mystérieuse", kind=default_kind)
+define femme2 = Character("Femme mystérieuse", kind=default_kind)
+define femme3 = Character("Femme mystérieuse", kind=default_kind)
+define inqui = Character("Inquisiteur", kind=default_kind)
+define narrator = nvl_narrator
 
 default stats.nonchalance = 0
 default stats.nonchalance_max = 0
@@ -367,7 +371,7 @@ label scene_2:
             """
             William s'inclina aussi bas qu'il le pouvait.
 
-            Ce n'était pas tant par respect des traditions et de l'autorité du comte que parce qu'il trouvait ces courbettes très amusantes."""
+            Ce n'était pas tant par respect des traditions et de l'autorité du comte que parce qu'il trouvait ces courbettes très amusantes et qu'elles lui permettaient d'exprimer toute sa préciosité."""
 
     ekul """
     Bienvenue dans ma demeure !

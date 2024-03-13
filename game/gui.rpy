@@ -387,15 +387,15 @@ define gui.nvl_borders = Borders(0, 10, 0, 20)
 
 ## Le nombre maximum d'entrées en mode NVL que Ren'Py affichera. Quand plus
 ## d'entrées sont affichées, les plus anciennes seront retirées.
-define gui.nvl_list_length = 6
+define gui.nvl_list_length = 15
 
 ## La hauteur d’une entrée en mode NVL. Initialisez-la à « None » pour que la
 ## hauteur des entrées s’ajuste automatiquement.
-define gui.nvl_height = 115
+define gui.nvl_height = None
 
 ## L’espacement entre les entrées en mode NVL quand gui.nvl_height est à
 ## « None » et entre les entrées en mode NVL et le menu en mode NVL.
-define gui.nvl_spacing = 10
+define gui.nvl_spacing = 20
 
 ## La position, largeur et alignement du label donnant le nom du personnage en
 ## train de parler.

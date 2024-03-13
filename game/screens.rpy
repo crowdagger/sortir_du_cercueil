@@ -1322,35 +1322,27 @@ style notify_text:
 
 
 screen nvl(dialogue, items=None):
+    frame:
+#        style "nvl_content_frame"
+        background None
 
-    window:
-        style "nvl_window"
+        viewport:
+            yinitial 1.0
 
-        has vbox:
-            spacing gui.nvl_spacing
-
-        ## Les dialogues sont affichés soit dans une vpgrid soit dans une vbox.
-        if gui.nvl_height:
-
-            vpgrid:
-                cols 1
-                yinitial 1.0
+            vbox:
+                spacing gui.nvl_spacing
 
                 use nvl_dialogue(dialogue)
 
-        else:
+                ## Si fourni, affiche le menu. Le menu peut s’afficher de manière
+                ## incorrecte si config.narrator_menu est initialisé à True.
+                for i in items:
 
-            use nvl_dialogue(dialogue)
+                    textbutton i.caption:
+                        action i.action
+                        style "nvl_button"
 
-        ## Si fourni, affiche le menu. Le menu peut s’afficher de manière
-        ## incorrecte si config.narrator_menu est initialisé à True.
-        for i in items:
-
-            textbutton i.caption:
-                action i.action
-                style "nvl_button"
-
-    add SideImage() xalign 0.0 yalign 1.0
+                add SideImage() xalign 0.0 yalign 1.0
 
 
 screen nvl_dialogue(dialogue):
