@@ -1,10 +1,12 @@
 label william:
     "William était un jeune hommme aux longs cheveux noirs et aux yeux bleu sombre au physique élancé. Il portait un vieux manteau rapiécé qui était clairement fait pour des régions au temps plus clément."
+    $ stats.visited.add("william")
 
     return
 
 label carimall:
     "William savait juste qu'elle s'appelait Carimall, mais n'avait même pas idée de son âge. Il espérait qu'elle n'était pas trop jeune. Les enfants se montraient étrangement réticents à l'idée de rester immobiles pour qu'on leur dresse le portrait."
+    $ stats.visited.add("carimall")
 
     return
 
@@ -21,6 +23,7 @@ label petit_monstre:
     
     Pire, elle lui avait même parlé directement, situation dont il s’était sorti en feignant de ne pas comprendre la langue locale.
     """
+    $ stats.visited.add("petit_monstre")
 
     return
 
@@ -32,6 +35,7 @@ label hallucination:
 
    Mais lorsqu’il était accompagné, il ne pouvait se permettre de lui répondre sans passer pour un fou et, comme Angèle ne se taisait pas pour autant, c’était une situation on ne peut plus frustrante.
    """
+   $ stats.visited.add("hallucination")
 
    return
 

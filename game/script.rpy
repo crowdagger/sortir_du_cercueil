@@ -27,6 +27,7 @@ default stats.maugreance = 0
 default stats.maugreance_max = 0
 default stats.artiste = 0
 default stats.artiste_max = 0
+default stats.visited = Set()
 
 label start:
     scene black
