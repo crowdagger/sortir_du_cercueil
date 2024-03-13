@@ -10,6 +10,19 @@ define femme2 = Character("Femme mystérieuse")
 define femme3 = Character("Femme mystérieuse")
 define inqui = Character("Inquisiteur")
 
+default stats.nonchalance = 0
+default stats.nonchalance_max = 0
+default stats.prudence = 0
+default stats.prudence_max = 0
+default stats.chatoyance = 0
+default stats.chatoyance_max = 0
+default stats.rebellion = 0
+default stats.rebellion_max = 0
+default stats.maugreance = 0
+default stats.maugreance_max = 0
+default stats.artiste = 0
+default stats.artiste_max = 0
+
 label start:
     scene black
     with fade
@@ -69,8 +82,12 @@ label start:
     
     "William s'alluma une cigarette."
 
+    $ stats.nonchalance_max += 1
+    $ stats.prudence_max += 1
+
     menu:
         "Réponse légère":
+            $ stats.nonchalance += 1
             william """
             Oh, rien de bien important.
 
@@ -92,6 +109,7 @@ label start:
             """
 
         "Réponse sérieuse":
+            $ stats.prudence += 1
             william """
             Elle parlait de se protéger le cou.
 
@@ -126,8 +144,11 @@ label start:
     Il paraissait plus proche que le précédent.
     """
 
+    $ stats.prudence_max += 1
+    $ stats.nonchalance_max += 1
     menu:
         "S'inquiéter":
+            $ stats.prudence += 1
             william "J’espère que le cocher va arriver vite…"
 
             """
@@ -143,6 +164,7 @@ label start:
 
             angele "Par contre, il y en a un {i}derrière{/i} toi."
         "Plaisanter":
+            $ stats.nonchalance += 1
             william "C'est peut-être juste quelqu'un qui joue avec un chien."
 
             angele """Plusieurs chiens, alors.
@@ -162,10 +184,13 @@ label start:
     Puis il en vit un autre sortir d’un fourré voisin.
     """
 
+    $ stats.nonchalance_max += 1
+    $ stats.prudence_max += 1
     menu:
         "Plaisanter":
-            pass
+            $ stats.nonchalance += 1
         "S'inquiéter":
+            $ stats.prudence += 1
             william "Bon sang, combien ils sont ?"
 
             angele "J’en vois cinq. Tout autour de toi."
@@ -180,8 +205,11 @@ label start:
 
     angele "Tu crois que les loups le savent, eux ?"
 
+    $ stats.nonchalance_max += 1
+    $ stats.prudence_max += 1
     menu:
         "Plaisanter":
+            $ stats.nonchalance += 1
             "William soupira."
 
             william "C’est pas un peu déjà vu, ça ?"
@@ -192,6 +220,7 @@ label start:
 
             angele "Ben, refait ou pas, t’es dans la merde."
         "S'inquiéter":
+            $ stats.prudence += 1
             william """J'en viendrais à me demander si je ne ferais pas mieux de trouver un meilleur plan que me reposer sur ma nonchalance légendaire."""
 
     """
@@ -217,12 +246,16 @@ label start:
     Globalement, elle était irréellement magnifique.
     """
 
+    $ stats.rebellion_max += 1
+    $ stats.chatoyance_max += 1
     menu:
         "S'incliner":
+             $ stats.chatoyance += 1
              "William s'inclina respectueusement."
 
              william "Madame, il semblerait que je vous doive une fière chandelle."
         "Froncer les sourcils":
+            $ stats.rebellion += 1
             william "Euh…"
 
             william "Je suppose que vous n’êtes pas le cocher ?"
@@ -236,14 +269,18 @@ label start:
 
     "Elle tendit gracieusement sa main à William."
 
+    $ stats.chatoyance_max += 1
+    $ stats.rebellion_max += 1
     menu:
         "Serrer la main":
+            $ stats.rebellion += 1
             william "William."
     
             "Il lui serra la main."
     
             angele "Hum, je crois que tu étais censé lui faire un baise-main."
         "Faire un baise-main":
+            $ stats.chatoyance += 1
             """William posa un genou à terre pour lui faire un baise-main.
 
             Il lui semblait que c'était ainsi que l'on se devait de se comporter avec l'aristocratie.
@@ -276,12 +313,16 @@ label scene_1:
 
    "William aperçut la silhouette lugubre du château, le chemin sinueux bordé de ravins qui menait vers lui et la pleine lune en partie masquée par une tour."
 
+   $ stats.artiste_max += 1
+   $ stats.maugreance_max += 1
    menu:
        "Maugréer":
+           $ stats.maugreance += 1
            william "Je vois vraiment pas pourquoi…"
 
            "Mais il marmonnait trop bas pour que la jeune femme l’entende."
        "S'extasier":
+           $ stats.artiste += 1
            william """
            Cela ne doit pas être évident tous les jours de vivre dans un lieu aussi isolé.
 
@@ -313,12 +354,16 @@ label scene_2:
 
     Entrez-y librement et de votre plein gré !"""
 
+    $ stats.maugreance_max += 1
+    $ stats.chatoyance_max += 1
     menu:
         "Maugréer":
+            $ stats.maugreance += 1
             william "Ben, vu le chemin que j’ai fait, je ne comptais pas rester dehors."
 
             "William marmonnait trop bas pour que son interlocuteur l’entende."
         "S'incliner":
+            $ stats.chatoyance += 1
             """
             William s'inclina aussi bas qu'il le pouvait.
 
@@ -411,8 +456,11 @@ label scene_4:
 
     ekul "Mais parfois, nécessité fait loi."
 
+    $ stats.prudence_max += 1
+    $ stats.rebellion_max += 1
     menu:
         "Approuver":
+            $ stats.prudence += 1
             "Le comte avait pris un air grave, incitant son invité à incliner la tête en approbation."
 
             william """
@@ -424,6 +472,7 @@ label scene_4:
 
             william "Ça compte pas."
         "Contredire":
+            $ stats.rebellion += 1
             "Le compte avait pris un air grave, mais William secouait la tête d'un air tout aussi convaincu."
 
             william """Je peux pas vous laisser dire ça, Comte.
@@ -487,10 +536,14 @@ label scene_5:
     Mais lorsqu’il suivit la jeune femme dans la chambre où elle était entrée, il n’y avait plus personne.
     """
 
+    $ stats.prudence_max += 1
+    $ stats.nonchalance_max += 1
     menu:
-        "Plaisanter": 
+        "Plaisanter":
+            $ stats.nonchalance += 1
             william "J’ai vraiment trop bu hier, moi."
         "S'inquiéter":
+            $ stats.prudence += 1
             william "Je vais commencer à croire qu'il y a quelque chose de pas clair, ici."
 
     """
@@ -508,14 +561,18 @@ label scene_5:
 
     femme1 "À toutes trois il nous donnera un baiser."
 
+    $ stats.nonchalance_max += 1
+    $ stats.chatoyance_max += 1
     menu:
-        "Fuire": 
+        "Fuire":
+            $ stats.chatoyance += 1
             """
             Le jeune homme écarquilla les yeux d’un air horrifié, attrapa un coussin, l’envoya à la figure de celle qui avait prononcé la phrase et se fraya un passage à travers les femmes.
             
             Alors qu’il sortait de la pièce, il faillit percuter le comte d’Ekul, qui, lui, désirait apparemment y entrer.
             """
         "Discuter":
+            $ stats.nonchalance += 1
             william "Mesdames, vous m'en voyez fort marri, mais..."
 
             "Il réfléchit à ce qu'il venait de dire."
@@ -555,8 +612,11 @@ label scene_5:
 
     "Le comte recula d’un pas."
 
+    $ stats.nonchalance_max += 1
+    $ stats.rebellion_max += 1
     menu:
         "Plaisanter":
+            $ stats.nonchalance += 1
             william "Euh, ça va."
 
             william "Sans vouloir vous vexer, Comte, j’ai dit des {i}beaux{/i} gars."
@@ -567,6 +627,7 @@ label scene_5:
 
             ekul "Bien. Avez-vous mangé ?"
         "S'offusquer":
+            $ stats.rebellion += 1
             william "Votre réaction est un tantinet vexante, monsieur le Comte."
 
             "Le comte l'examina de haut en bas, puis de bas en haut."
