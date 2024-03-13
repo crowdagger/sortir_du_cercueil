@@ -1405,7 +1405,7 @@ style nvl_dialogue:
     min_width gui.nvl_text_width
     textalign gui.nvl_text_xalign
     layout ("subtitle" if gui.nvl_text_xalign else "tex")
-    justify False
+    justify True
 
 style nvl_thought:
     xpos gui.nvl_thought_xpos
