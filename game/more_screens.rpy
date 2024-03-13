@@ -5,7 +5,7 @@ screen stats:
             spacing 20
             text "STATISTIQUES":
                 xalign 0.5
-            grid 3 6:
+                grid 3 7:
                 spacing 20
                 $ nonchalance = (100.0 * stats.nonchalance)/stats.nonchalance_max
                 $ prudence = (100.0 * stats.prudence)/stats.prudence_max
@@ -13,6 +13,7 @@ screen stats:
                 $ rebellion = (100.0 * stats.rebellion)/stats.rebellion_max
                 $ maugreance = (100.0 * stats.maugreance)/stats.maugreance_max
                 $ artiste = (100.0 * stats.artiste)/stats.artiste_max
+                $ meticulosite = (100.0 * len(stats.visited))/ 5
                                 
                 text "NONCHALANCE" xalign 0.5
                 text "[nonchalance:.0f] %" xalign 0.5
@@ -38,3 +39,7 @@ screen stats:
                 text "[artiste:.0f] %" xalign 0.5
                 bar value artiste range 100.0 xsize 150                    
 
+                text "MÉTICULOSITÉ" xalign 0.5
+                text "[meticulosite:.0f] %" xalign 0.5
+                bar value meticulosite range 100.0 xsize 150                    
+                
