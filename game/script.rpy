@@ -13,6 +13,7 @@ define femme2 = Character("Femme mystérieuse", kind=default_kind)
 define femme3 = Character("Femme mystérieuse", kind=default_kind)
 define inqui = Character("Inquisiteur", kind=default_kind)
 define narrator = nvl_narrator
+define menu = nvl_menu
 
 default stats.nonchalance = 0
 default stats.nonchalance_max = 0
@@ -47,20 +48,20 @@ label start:
     $ renpy.pause(2.0)
 
     "
-    {a=call_in_new_context:william}William{/a} fit un sourire crispé à la petite fille qui lui tirait la langue et tourna la tête vers la fenêtre de la diligence." with dissolve
+    {a=call:william}William{/a} fit un sourire crispé à la petite fille qui lui tirait la langue et tourna la tête vers la fenêtre de la diligence." with dissolve
 
     """
     Le paysage de la Transye Vanille était magnifique, avec ses belles forêts enneigées et ses montagnes majestueuses ; mais il commençait à s’en lasser un peu.
 
-    William était un artiste dans le besoin, aussi avait-il accepté la proposition du comte d’Ekul, qui le payait grassement pour qu’il vienne dans son château dresser le portrait de {a=call_in_new_context:carimall}sa fille{/a}.
+    William était un artiste dans le besoin, aussi avait-il accepté la proposition du comte d’Ekul, qui le payait grassement pour qu’il vienne dans son château dresser le portrait de {a=call:carimall}sa fille{/a}.
 
     Il n’avait juste pas réalisé que le voyage serait si long, que la diligence lui ferait si mal aux fesses, qu’il ne pourrait pas fumer pendant aussi longtemps et qu’il y aurait tant de monde à l’intérieur.
 
-    La voiture était en effet pleinement occupée : {a=call_in_new_context:jeunes_hommes}deux jeunes hommes bien habillés{/a} partageaient sa banquette, tandis qu’il faisait face à un couple hétérosexuel accompagné de leur {a=call_in_new_context:petit_monstre}petit monstre{/a}.
+    La voiture était en effet pleinement occupée : {a=call:jeunes_hommes}deux jeunes hommes bien habillés{/a} partageaient sa banquette, tandis qu’il faisait face à un couple hétérosexuel accompagné de leur {a=call:petit_monstre}petit monstre{/a}.
 
     Il y avait aussi une septième passagère, qui, faute de place, avait la moitié du corps proprement à travers celui de son voisin.
 
-    Si Angèle pouvait se mettre dans cette position, c’était parce qu’elle n’existait pas vraiment et n’était qu’une {a=call_in_new_context:hallucination}hallucination{/a} de l’artiste.
+    Si Angèle pouvait se mettre dans cette position, c’était parce qu’elle n’existait pas vraiment et n’était qu’une {a=call:hallucination}hallucination{/a} de l’artiste.
 
 
     La diligence se mit enfin à ralentir, ce qui signifiait que le voyage touchait à sa fin.
