@@ -42,6 +42,10 @@ Creative Commons By-SA 4.0
 
 {a=https://crowdagger.fr}Lizzie Crowdagger{/a}
 
+MOTEUR
+
+{a=https://www.renpy.org/}Ren'Py{/a}
+
 
 MUSIQUES
 
@@ -57,7 +61,7 @@ Vampire's Piano : {a=https://opengameart.org/content/vampires-piano}TAD{/a} (CC0
 
 Rival's theme : {a=https://opengameart.org/content/rivals-theme}Bobjt{/a} (CC-By)
 
-{a=https://opengameart.org/content/dream-raid-cinematic-action-soundtrackDream Raid{/a} : {a=http://www.matthewpablo.com}Matthew Pablo{/a} (CC-By)
+{a=https://opengameart.org/content/dream-raid-cinematic-action-soundtrack}Dream Raid{/a} : {a=http://www.matthewpablo.com}Matthew Pablo{/a} (CC-By)
 
 {a=https://opengameart.org/content/colossal-boss-battle-theme}Blackmoore Colossus{/a} : {a= http://www.matthewpablo.com}Matthew Pablo{/a} (CC-By)
 
@@ -78,6 +82,23 @@ Vent : {a=https://opengameart.org/content/wind1}Luke.RUSTLTD{/a} (CC0)
 Cigarette : {a=https://freesound.org/people/AldebaranCW/sounds/453082/}AldebaranCW{/a} (CC0, raccourci)
 
 Loup : {a=https://freesound.org/people/sandboks/sounds/503516/}Sandboks{/a} (CC0, raccourci)
+
+
+
+
+
+
+MERCI D'AVOIR JOUÉ
+
+Retrouvez d'autres textes sur {a=https://crowdagger.fr}https://crowdagger.fr{/a}
+
+
+
+
+
+
+
+
 """)
 
 

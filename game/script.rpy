@@ -69,25 +69,38 @@ label start:
     
     "William s'alluma une cigarette."
 
-    william """
-    Oh, rien de bien important.
+    menu:
+        "Réponse légère":
+            william """
+            Oh, rien de bien important.
 
-    De protéger mon cou, quelque chose comme ça.
+            De protéger mon cou, quelque chose comme ça.
 
-    Et une histoire de {i}buveur décent{/i}.
+            Et une histoire de {i}buveur décent{/i}.
 
-    Mais il n’y a pas de problème, j’ai pensé à amener une bouteille, je sais que ce sont des choses qui se font.
-    """ 
+            Mais il n’y a pas de problème, j’ai pensé à amener une bouteille, je sais que ce sont des choses qui se font.
+            """ 
 
-    angele """
-    Elle prend vraiment les étrangers pour des gens sans éducation.
-    """ 
+            angele """
+            Elle prend vraiment les étrangers pour des gens sans éducation.
+            """ 
 
-    william """
-    Elle a aussi dit quelque chose…
+            william """
+            Elle a aussi dit quelque chose…
+            
+            Que les choses là-bas n’étaient pas ce qu’elles semblaient être et que le mal était caché là où on ne le soupçonnait pas.
+            """
 
-    Que les choses là-bas n’étaient pas ce qu’elles semblaient être et que le mal était caché là où on ne le soupçonnait pas.
-    """ 
+        "Réponse sérieuse":
+            william """
+            Elle parlait de se protéger le cou.
+
+            Et de buveurs de sang.
+
+            Il faut croire que les rumeurs à ce sujet disaient vrai.
+
+            Elle a aussi dit que les choses là-bas n’étaient pas ce qu’elles semblaient être et que le mal était caché là où on ne le soupçonnait pas.
+            """
 
     angele "Heureusement que tu aimes bien les mâles, alors." 
 
@@ -108,19 +121,38 @@ label start:
 
     angele "Un loup, non ?"
 
-    "Un nouvel hurlement vint confirmer l’hypothèse de l’hallucination. Il paraissait plus proche."
+    """Un nouvel hurlement vint confirmer l’hypothèse de l’hallucination.
 
-    william "J’espère que le cocher va arriver vite…"
+    Il paraissait plus proche que le précédent.
+    """
 
-    "Le jeune homme aperçut un mouvement à la périphérie de son champ de vision. Lorsqu’il tourna la tête, il n’y avait rien."
+    menu:
+        "S'inquiéter":
+            william "J’espère que le cocher va arriver vite…"
 
-    william "J’ai cru voir quelque chose."
+            """
+            Le jeune homme aperçut un mouvement à la périphérie de son champ de vision.
 
-    angele "Non, il n’y avait rien, rassura Angèle. Tu as rêvé."
+            Lorsqu’il tourna la tête, il n’y avait rien."""
 
-    william "Ah."
+            william "J’ai cru voir quelque chose."
 
-    angele "Par contre, il y en a un derrière toi."
+            angele "Non, il n’y avait rien. Tu as rêvé."
+
+            william "Ah."
+
+            angele "Par contre, il y en a un {i}derrière{/i} toi."
+        "Plaisanter":
+            william "C'est peut-être juste quelqu'un qui joue avec un chien."
+
+            angele """Plusieurs chiens, alors.
+
+            Et des gros."""
+
+            william "Tu es vraiment obligée de tout dramatiser ?"
+
+            angele "Si je voulais dramatiser, je ferais remarquer qu'il y en a un derrière toi, de ces « chiens »."
+
 
     play music "last_encounter.mp3" fadein 1.0 fadeout 1.0 volume 0.5
 
@@ -130,11 +162,15 @@ label start:
     Puis il en vit un autre sortir d’un fourré voisin.
     """
 
-    william "Bon sang, combien ils sont ?"
+    menu:
+        "Plaisanter":
+            pass
+        "S'inquiéter":
+            william "Bon sang, combien ils sont ?"
 
-    angele "J’en vois cinq. Tout autour de toi."
+            angele "J’en vois cinq. Tout autour de toi."
 
-    william "Hum."
+            william "Hum."
 
     "Le peintre inspira une bouffée de tabac."
 
@@ -144,18 +180,22 @@ label start:
 
     angele "Tu crois que les loups le savent, eux ?"
 
-    "William soupira."
+    menu:
+        "Plaisanter":
+            "William soupira."
 
-    william "C’est pas un peu déjà vu, ça ?"
+            william "C’est pas un peu déjà vu, ça ?"
 
-    angele "Quoi ?"
+            angele "Quoi ?"
 
-    william "Ta phrase. « Je sais qu’ils ne font pas un truc — tu crois qu’ils le savent, eux ? », c’est aussi refait que le coup du « je ne crois pas en machin — mais on dirait que machin croit en toi »."
+            william "Ta phrase. « Je sais qu’ils ne font pas un truc — tu crois qu’ils le savent, eux ? », c’est aussi refait que le coup du « je ne crois pas en machin — mais on dirait que machin croit en toi »."
 
-    angele "Ben, refait ou pas, t’es dans la merde."
+            angele "Ben, refait ou pas, t’es dans la merde."
+        "S'inquiéter":
+            william """J'en viendrais à me demander si je ne ferais pas mieux de trouver un meilleur plan que me reposer sur ma nonchalance légendaire."""
 
     """
-    William haussa les épaules et essaya de s’approcher doucement d’un arbre.
+    William essaya de s’approcher lentement d’un arbre.
 
     Il n’était pas très doué en escalade mais, s’il apprenait vite, il avait peut-être une chance de s’en sortir vivant.
     """
@@ -177,9 +217,15 @@ label start:
     Globalement, elle était irréellement magnifique.
     """
 
-    william "Euh…"
+    menu:
+        "S'incliner":
+             "William s'inclina respectueusement."
 
-    william "Je suppose que vous n’êtes pas le cocher ?"
+             william "Madame, il semblerait que je vous doive une fière chandelle."
+        "Froncer les sourcils":
+            william "Euh…"
+
+            william "Je suppose que vous n’êtes pas le cocher ?"
 
     carimall """
     Père m’a demandé d’accompagner notre serviteur pour venir vous chercher.
@@ -190,11 +236,21 @@ label start:
 
     "Elle tendit gracieusement sa main à William."
 
-    william "William."
+    menu:
+        "Serrer la main":
+            william "William."
     
-    "Il lui serra la main."
+            "Il lui serra la main."
     
-    angele "Hum, je crois que tu étais censé lui faire un baise-main."
+            angele "Hum, je crois que tu étais censé lui faire un baise-main."
+        "Faire un baise-main":
+            """William posa un genou à terre pour lui faire un baise-main.
+
+            Il lui semblait que c'était ainsi que l'on se devait de se comporter avec l'aristocratie.
+
+            Et puis, il trouvait cet usage délicieusement ridicule et désuet."""
+
+            william "Ravi de faire votre connaissance. Je m'appelle William."
 
     carimall "Je vais prendre vos bagages, William."
 
@@ -220,9 +276,23 @@ label scene_1:
 
    "William aperçut la silhouette lugubre du château, le chemin sinueux bordé de ravins qui menait vers lui et la pleine lune en partie masquée par une tour."
 
-   william "Je vois vraiment pas pourquoi…"
+   menu:
+       "Maugréer":
+           william "Je vois vraiment pas pourquoi…"
 
-   "Mais il marmonnait trop bas pour que la jeune femme l’entende."
+           "Mais il marmonnait trop bas pour que la jeune femme l’entende."
+       "S'extasier":
+           william """
+           Cela ne doit pas être évident tous les jours de vivre dans un lieu aussi isolé.
+
+           Néanmoins, le jeu en vaut la chandelle, non ?
+
+           Quel paysage ! Vous ne devez pas vous en lasser.
+           """
+
+           "Carimall lui jeta un regard étonné."
+
+           carimall "Non. {i}Jamais{/i}."
 
    jump scene_2
 
@@ -243,9 +313,16 @@ label scene_2:
 
     Entrez-y librement et de votre plein gré !"""
 
-    william "Ben, vu le chemin que j’ai fait, je ne comptais pas rester dehors."
+    menu:
+        "Maugréer":
+            william "Ben, vu le chemin que j’ai fait, je ne comptais pas rester dehors."
 
-    "William marmonnait trop bas pour que son interlocuteur l’entende."
+            "William marmonnait trop bas pour que son interlocuteur l’entende."
+        "S'incliner":
+            """
+            William s'inclina aussi bas qu'il le pouvait.
+
+            Ce n'était pas tant par respect des traditions et de l'autorité du comte que parce qu'il trouvait ces courbettes très amusantes."""
 
     ekul """
     Bienvenue dans ma demeure !
@@ -334,19 +411,30 @@ label scene_4:
 
     ekul "Mais parfois, nécessité fait loi."
 
-    "Le comte avait pris un air grave, incitant son invité à incliner la tête en approbation."
+    menu:
+        "Approuver":
+            "Le comte avait pris un air grave, incitant son invité à incliner la tête en approbation."
 
-    william """
-    ’videmment.
+            william """
+            ’videmment.
 
-    Mais dans ce cas…"""
+            Mais dans ce cas…"""
 
-    "Il parut réfléchir pendant quelques secondes."
+            "Il parut réfléchir pendant quelques secondes."
 
-    william """
-    Ça compte pas.
+            william "Ça compte pas."
+        "Contredire":
+            "Le compte avait pris un air grave, mais William secouait la tête d'un air tout aussi convaincu."
 
-    Bon. J’crois qu’j’vais aller roupiller."""
+            william """Je peux pas vous laisser dire ça, Comte.
+
+            Je veux dire...
+
+            Hum...
+
+            On parlait de quoi, déjà ?"""
+
+    william "Bon. J’crois qu’j’vais aller roupiller."
 
     ekul """
     Je vais vous montrer votre chambre.
@@ -399,7 +487,11 @@ label scene_5:
     Mais lorsqu’il suivit la jeune femme dans la chambre où elle était entrée, il n’y avait plus personne.
     """
 
-    william "J’ai vraiment trop bu hier, moi."
+    menu:
+        "Plaisanter": 
+            william "J’ai vraiment trop bu hier, moi."
+        "S'inquiéter":
+            william "Je vais commencer à croire qu'il y a quelque chose de pas clair, ici."
 
     """
     Lorsqu’il se retourna, il réalisa qu’il n’était plus seul, mais face à trois jeunes femmes à la beauté envoûtante et aux vêtements élaborés quoique peu couvrants.
@@ -416,13 +508,34 @@ label scene_5:
 
     femme1 "À toutes trois il nous donnera un baiser."
 
-    """
-    Le jeune homme écarquilla les yeux d’un air horrifié, attrapa un coussin, l’envoya à la figure de celle qui avait prononcé la phrase et se fraya un passage à travers les femmes.
+    menu:
+        "Fuire": 
+            """
+            Le jeune homme écarquilla les yeux d’un air horrifié, attrapa un coussin, l’envoya à la figure de celle qui avait prononcé la phrase et se fraya un passage à travers les femmes.
+            
+            Alors qu’il sortait de la pièce, il faillit percuter le comte d’Ekul, qui, lui, désirait apparemment y entrer.
+            """
+        "Discuter":
+            william "Mesdames, vous m'en voyez fort marri, mais..."
 
-Alors qu’il sortait de la pièce, il faillit percuter le comte d’Ekul, qui, lui, désirait apparemment y entrer.
+            "Il réfléchit à ce qu'il venait de dire."
 
-    Il semblait furieux.
-    """
+            william """
+            Ma{i}rr{/i}i.
+
+            Avec {i}deux{/i} 'r'.
+
+            Du verbe {i}marrir{/i}, pas {i}marier{/i}.
+
+            Ce que je veux dire par là, c'est que…"""
+
+            """
+            Il n'eut pas le temps de parvenir à s'expliquer.
+
+            Le compte d'Ekul venait de débarquer en trombe dans la pièce."""
+            
+            
+    "Il semblait furieux."
 
     ekul "Vous l’avez touché ?"
 
@@ -442,15 +555,30 @@ Alors qu’il sortait de la pièce, il faillit percuter le comte d’Ekul, qui, 
 
     "Le comte recula d’un pas."
 
-    william "Euh, ça va."
+    menu:
+        "Plaisanter":
+            william "Euh, ça va."
 
-    william "Sans vouloir vous vexer, Comte, j’ai dit des {i}beaux{/i} gars."
+            william "Sans vouloir vous vexer, Comte, j’ai dit des {i}beaux{/i} gars."
 
-    ekul "Oh."
+            ekul "Oh."
 
-    "Le comte semblait plus rassuré que vexé."
+            "Le comte semblait plus rassuré que vexé."
 
-    ekul "Bien. Avez-vous mangé ?"
+            ekul "Bien. Avez-vous mangé ?"
+        "S'offusquer":
+            william "Votre réaction est un tantinet vexante, monsieur le Comte."
+
+            "Le comte l'examina de haut en bas, puis de bas en haut."
+
+            ekul """Je vous présente mes excuses.
+
+            C'est juste qu'il y avait certaines... possibilités auxquelles je n'avais jamais songé.
+
+            Peut-être qu'il n'y a pas qu'en matière de vin que vous arriverez à me faire élargir l'horizon de mes appétits.
+
+            En parlant d'appétit, avez-vous mangé ?"""
+
 
     william "Non, d’ailleurs, si vous pouviez me montrer sur un plan où se trouve le salon…"
 
@@ -685,7 +813,11 @@ label scene_10:
 
     ekul "Vous n’avez aucune idée de ce qu’elle est !"
 
-    william "Vous… réalisez… peux… pas… respirer ?"
+    william """Vous… réalisez…
+
+    peux… pas…
+
+    respirer ?"""
 
     ekul "Vous n’avez aucune idée de ce qu’elle est."
 

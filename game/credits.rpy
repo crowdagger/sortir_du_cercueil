@@ -1,25 +1,13 @@
 label credits:
     scene black with dissolve
 
-    play music "no_joke_is_all_that_counts.mp3" fadein 1.0 fadeout 1.0 
-    show text "ÉCRITURE : LIZZIE CROWDAGGER" with dissolve
+    play music "no_joke_is_all_that_counts.mp3" fadein 1.0 fadeout 1.0
 
-    $ renpy.pause(2.0)
-    
-    show text "LICENCE : CC By-SA 4.0" with dissolve
+    $ credits_speed = 25
 
-    $ renpy.pause(2.0)
+    show text "[gui.about!t]\n"  at Move((0.5, 1.0), (0.5, -2.0), credits_speed, xanchor=0.5, yanchor=0)
+    with Pause(credits_speed+10) 
 
-    show text "MOTEUR {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]"
-
-    $ renpy.pause(2.0)
-
-    show text """
-    SONS
-    
-    TEMPÊTE DE VENT : {a=https://https://freesound.org/people/Aldelri/sounds/508474/}Alderli{/a} (CC0)
-    """
-
-    $ renpy.pause(2.0)
+    $ renpy.pause()
     
     return
