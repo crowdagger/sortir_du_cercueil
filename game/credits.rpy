@@ -60,7 +60,7 @@ Cigarette : {a=https://freesound.org/people/AldebaranCW/sounds/453082/}Aldebaran
 
 Loup : {a=https://freesound.org/people/sandboks/sounds/503516/}Sandboks{/a} (CC0, raccourci)
 
-
+Arbalète : {a=https://opengameart.org/content/crossbow-sounds}HolgiB{/a} (CC-By)
 
 
 
