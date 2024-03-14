@@ -25,6 +25,8 @@ default stats.rebellion = 0
 default stats.rebellion_max = 0
 default stats.maugreance = 0
 default stats.maugreance_max = 0
+default stats.compassion = 0
+default stats.compassion_max = 0
 default stats.artiste = 0
 default stats.artiste_max = 0
 default stats.visited = Set()
@@ -717,15 +719,30 @@ label scene_6:
 
     carimall "Vous n’imaginez pas. Et en plus, nous sommes dans un pays si reculé…"
 
-    william """
-    Il faut voir le bon côté des choses. Les paysages sont magnifiques.
+    $ stats.artiste_max += 1
+    $ stats.chatoyance_max += 1
+    menu:
+        "Relativiser":
+            $ stats.artiste += 1
+            william """
+            Il faut voir le bon côté des choses. Les paysages sont magnifiques.
 
-    Je vais vous peindre devant un superbe décor."""
+            Je vais vous peindre devant un superbe décor."""
 
-    carimall "Mouais."
+            carimall "Mouais."
 
-    "Elle ne paraissait pas très convaincue."
+            "Elle ne paraissait pas très convaincue."
+        "Proposer une alternative":
+            $ stats.chatoyance += 1
+            william """
+            Vous devriez essayer de venir à Nonry.
 
+            Je suis sûr que vous feriez en malheur."""
+
+            "Carimall arbora un demi-sourire timide. Elle était clairement tiraillée entre l'envie et l'appréhension."
+
+            carimall "Je ne suis pas persuadée que j'y aurais ma place..."
+        
     jump scene_7
 
 label scene_7:
@@ -742,7 +759,9 @@ label scene_7:
 
     carimall "C’est magnifique."
 
-    "Elle contemplait le tableau la représentant devant un ciel trop bleu pour être vrai."
+    $ stats.artiste_max += 1
+
+    "Elle contemplait {a=call:side_tableau}le tableau{/a} la représentant devant un ciel trop bleu pour être vrai."
 
     carimall "J’aimerais tellement pouvoir sortir sous un tel soleil…"
 
@@ -763,7 +782,7 @@ label scene_7:
     william """
     Tu ne crois pas que c’est aussi en train de te tuer ?
 
-    Tu appelles ça vivre, rester cloitrée dans ce vieux château ?"""
+    Tu appelles ça vivre, rester {a=call:side_cloitree}cloitrée{/a} dans ce vieux château ?"""
 
     carimall """
     J’irais où, de toute façon ?
@@ -817,16 +836,27 @@ label scene_8:
 
     "Il lui attrapa la main."
 
-    william "C’est dans la tête. Je suis avec toi, d’accord ?"
+    $ stats.chatoyance_max += 1
+    $ stats.prudence_max += 1
+    menu:
+        "Encourager":
+            $ stats.chatoyance += 1
+            william "C’est dans la tête. Je suis avec toi, d’accord ?"
 
-    carimall "Mais toi tu n’es pas… enfin…"
+            carimall "Mais toi tu n’es pas… enfin…"
+
+            william "Ferme les yeux."
+
+            carimall "Ce n’est pas une bonne idée. S’il te plaît…"
+        "Rassurer":
+            $ stats.prudence += 1
+            william "Ne t'en fais pas, je suis avec toi. Au moindre problème, je te ramène à l'intérieur."
+
+            carimall "Je ne sais pas."
+
+            william "Je ne te proposerais pas ça en plein midi, mais le soleil est encore bas. Je pense vraiment que tu ne crains rien."
 
     william "Ferme les yeux."
-
-    carimall "Ce n’est pas une bonne idée. S’il te plaît…"
-
-    william "Ferme les yeux."
-
     """
     La jeune femme obéit et abaissa ses paupières, pendant que l’artiste la tirait vers la lumière.
 
@@ -900,7 +930,22 @@ label scene_10:
 
     carimall "Mais tu ne sais pas ce que je suis réellement…"
 
-    william "Je m’en moque. Ce n’est pas ça qui…"
+    $ stats.compassion_max += 1
+    $ stats.artiste_max += 1
+    
+    menu:
+        "Compatir":
+            $ stats.compassion += 1
+            william "Je m’en moque. Ce n’est pas ça qui…"
+        "Réfléchir":
+            $ stats.artiste += 1
+            """William allait la contredire, mais il hésita un moment.
+
+            Il savait évidemment que la jeune femme était une vampire. Il n'était pas idiot.
+
+            Mais elle devait se douter qu'il savait, elle l'avait vu lui essuyer une larme de sang.
+
+            Est-ce qu'elle pensait à autre chose que le vampirisme ?"""
 
     play music "rivals_theme.mp3" fadein 1.0 fadeout 1.0 volume 0.5
 
@@ -920,7 +965,7 @@ label scene_10:
 
     william "Vous dites ça sur…. le coup de la colère, Comte."
 
-    ekul "Vous auriez pu la tuer, espèce de taré !"
+    ekul "{i}Vous{/i} auriez pu la tuer, espèce de taré !"
 
     william "Je ne crois… pas…"
 
@@ -952,16 +997,43 @@ label scene_10:
 
     angele "Elle ne sort pas au soleil, elle a la peau blanche, elle chiale des larmes de sang et on devrait ne pas se douter que c’est une vampire ?"
 
-    william """
-    C’est une sorte de tradition, je suppose.
+    $ stats.nonchalance_max += 1
+    $ stats.artiste_max += 1
 
-    Je pense que je serais mal vu si je ne faisais pas celui qui ne sait pas."""
+    menu:
+        "Plaisanter":
+            $ stats.nonchalance += 1
+            william """
+            C’est une sorte de tradition, je suppose.
 
-    angele "Par contre, je pense qu’au moins Carimall fait semblant de ne pas voir que tu fais semblant de ne pas voir qu’elle est une vampire."
+            Je pense que je serais mal vu si je ne faisais pas celui qui ne sait pas."""
 
-    william """Je ne sais pas.
+            angele "Par contre, je pense qu’au moins Carimall fait semblant de ne pas voir que tu fais semblant de ne pas voir qu’elle est une vampire."
 
-    Mais je crois que je vais aller me coucher. Tes raisonnements me filent mal au crâne."""
+            william """Je ne sais pas.
+
+            Mais je crois que je vais aller me coucher. Tes raisonnements me filent mal au crâne."""
+        "Réfléchir":
+            $ stats.artiste += 1
+            william """
+            Je ne sais pas...
+
+            Je veux dire, oui, c'est évident que c'est une vampire, tout comme ce bon comte.
+
+            Mais je me demande s'il n'y a pas... {i}autre chose{/i} ?"""
+
+            "Angèle fronça les sourcils."
+
+            angele "Comme quoi ?"
+
+            "William haussa les épaules."
+
+            william """
+            Aucune idée.
+
+            Je suis trop crevée pour y réfléchir. Je vais aller me pieuter."""
+
+            angele "Tu devrais peut-être faire plus attention aux mots que tu utilises."
 
     jump scene_11
 

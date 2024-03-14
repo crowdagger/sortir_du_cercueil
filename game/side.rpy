@@ -93,4 +93,19 @@ label side_nuit:
 
    $ stats.visited.add("nuit")
 
-   return 
+   return
+
+label side_tableau:
+    """William n'était pas mécontent de son travail, même si, d'un point de vue purement esthétique, il aurait préféré la peindre devant un crépuscule, ou pourquoi pas une pleine lune."""
+
+    $ stats.visited.add("tableau")
+    return
+
+label side_cloitree:
+    """
+    « Cloitrée » n'était peut-être pas le bon terme : William avait pu constater que la jeune femme n'avait pas peur de sortir, y compris en pleine nuit.
+
+    Mais il n'était pas certain que ses balades en solitaire soient une grande source de satisfaction."""
+
+    $ stats.visited.add("cloitree")
+    return
