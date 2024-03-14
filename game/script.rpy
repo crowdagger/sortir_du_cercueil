@@ -3,10 +3,10 @@
 define default_kind = nvl
 
 
-define angele = Character('Angèle', color = "#52d442", kind=default_kind)
-define william = Character("William", color = "#6c42d4", kind=default_kind)
+define angele = Character('Angèle', image = "angele", color = "#52d442", kind=default_kind)
+define william = Character("William", image = "william", color = "#6c42d4", kind=default_kind)
 define loup = Character("Loup", color = "#9c9ea8", kind=default_kind)
-define carimall = Character("Carimall", color = "#a02eec", kind=default_kind)
+define carimall = Character("Carimall", image = "carimall", color = "#a02eec", kind=default_kind)
 define ekul = Character("Comte d'Ekul", color = "#ec2e5e", kind=default_kind)
 define femme1 = Character("Femme mystérieuse", color = "#d442c3", kind=default_kind)
 define femme2 = Character("Femme intrigante", color = "#d442a8", kind=default_kind)
@@ -14,6 +14,10 @@ define femme3 = Character("Femme mystérieuse", kind=default_kind)
 define inqui = Character("Inquisiteur", color = "#425fd4", kind=default_kind)
 define narrator = nvl_narrator
 define menu = nvl_menu
+
+image side william = "william.png"
+image side angele = "angele.png"
+image side carimall = "carimall.png"
 
 default stats.nonchalance = 0
 default stats.nonchalance_max = 0

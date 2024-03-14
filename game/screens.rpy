@@ -1337,12 +1337,13 @@ screen nvl(dialogue, items=None):
                 ## Si fourni, affiche le menu. Le menu peut s’afficher de manière
                 ## incorrecte si config.narrator_menu est initialisé à True.
                 for i in items:
-
                     textbutton i.caption:
                         action i.action
                         style "nvl_button"
+        add SideImage() xalign 0.0 yalign 1.0
 
-                add SideImage() xalign 0.0 yalign 1.0
+
+
 
 
 screen nvl_dialogue(dialogue):
@@ -1355,6 +1356,8 @@ screen nvl_dialogue(dialogue):
 
             fixed:
                 yfit gui.nvl_height is None
+
+#                add SideImage() xalign 0.0 yalign 1.0
 
                 if d.who is not None:
 

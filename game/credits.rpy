@@ -20,6 +20,9 @@ ILLUSTRATIONS
 
 {a=https://pixabay.com/fr/photos/nuit-ch%C3%A2teau-corbeau-fantaisie-3129908/}Illustration de titre{/a} : {a=https://pixabay.com/fr/users/peterpang252-7818586/}peterpang252 sur Pixabay{/a}
 
+{a=https://opengameart.org/content/mostly-16x18-characters-and-48x48-portraits-repack}Portraits{/a} : Art by Charles Gabriel and Antifarea.
+Commissioned by {a=https://opengameart.org}OpenGameArt.org{/a}
+
 
 MUSIQUES
 
