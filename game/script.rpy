@@ -4,7 +4,7 @@ define default_kind = nvl
 
 
 define angele = Character('Angèle', image = "angele", color = "#52d442", kind=default_kind)
-define william = Character("William", image = "william", color = "#6c42d4", kind=default_kind)
+default william = Character("William", image = "william", color = "#6c42d4", kind=default_kind)
 define loup = Character("Loup", color = "#9c9ea8", kind=default_kind)
 define carimall = Character("Carimall", image = "carimall", color = "#a02eec", kind=default_kind)
 define ekul = Character("Comte d'Ekul", image = "ekul", color = "#ec2e5e", kind=default_kind)
@@ -16,6 +16,7 @@ define narrator = nvl_narrator
 define menu = nvl_menu
 
 image side william = "william.png"
+image side william vampire = "william_vampire.png"
 image side angele = "angele.png"
 image side carimall = "carimall.png"
 image side ekul = "ekul.png"
@@ -29,8 +30,6 @@ default stats.chatoyance = 0
 default stats.chatoyance_max = 0
 default stats.rebellion = 0
 default stats.rebellion_max = 0
-default stats.maugreance = 0
-default stats.maugreance_max = 0
 default stats.compassion = 0
 default stats.compassion_max = 0
 default stats.artiste = 0
@@ -343,10 +342,10 @@ label scene_1:
    "William aperçut la silhouette lugubre du château, le chemin sinueux bordé de ravins qui menait vers lui et la pleine lune en partie masquée par une tour."
 
    $ stats.artiste_max += 1
-   $ stats.maugreance_max += 1
+   $ stats.compassion_max += 1
    menu:
        "Maugréer":
-           $ stats.maugreance += 1
+           $ stats.compassion += 1
            william "Je vois vraiment pas pourquoi…"
 
            "Mais il marmonnait trop bas pour que la jeune femme l’entende."
@@ -384,11 +383,11 @@ label scene_2:
 
     Entrez-y librement et de votre plein gré !"""
 
-    $ stats.maugreance_max += 1
+    $ stats.rebellion_max += 1
     $ stats.chatoyance_max += 1
     menu:
         "Maugréer":
-            $ stats.maugreance += 1
+            $ stats.rebellion += 1
             william "Ben, vu le chemin que j’ai fait, je ne comptais pas rester dehors."
 
             "William marmonnait trop bas pour que son interlocuteur l’entende."
@@ -690,7 +689,6 @@ label scene_5:
     menu:
         "Plaisanter":
             $ stats.nonchalance += 1
-            $ stats.ekul = 0
             william "Euh, ça va."
 
             william "Sans vouloir vous vexer, Comte, j’ai dit des {i}beaux{/i} gars."
@@ -703,6 +701,7 @@ label scene_5:
         "S'offusquer":
             $ stats.ekul += 1
             $ stats.rebellion += 1
+            $ stats.flags.add("appetits")
             william "Votre réaction est un tantinet vexante, monsieur le Comte."
 
             "Le comte l'examina de haut en bas, puis de bas en haut."
@@ -1204,7 +1203,7 @@ label scene_12:
     menu:
         "Devenir fou":
             $ stats.rebellion += 1
-            $ stats.ekul += 1
+            $ stats.ekul += 2
             william "COMTE !"
 
             """Pendant qu'il hurlait, Carimall prenait la fuite, suivie des trois femmes que William avait croisées la veille.
@@ -1397,7 +1396,7 @@ label scene_13:
 
     carimall "Ah, tu te réveilles."
 
-    william "Aaargl."
+    william vampire "Aaargl."
     
     "La jeune femme retira le poignet qu’elle s’était ouvert et lança un sourire charmeur au nouveau vampire."
 
@@ -1512,7 +1511,7 @@ label epilogue:
 
     Comme quoi, décida le vampire, il ne fallait jamais négliger les vertus d’un simple sourire."""
 
-    william "Ça va ?"
+    william vampire "Ça va ?"
 
     """
     Carimall regardait par la fenêtre la silhouette du château disparaitre.
@@ -1554,11 +1553,13 @@ label epilogue:
     jump fin 
 
 label fin:
+    window hide
     scene black with dissolve
+
 
     show text "FIN" with dissolve
 
-    $ renpy.pause(2.0)
+    $ renpy.pause(3.0)
 
     jump credits 
     

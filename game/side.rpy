@@ -123,13 +123,20 @@ label side_comte_carimall:
 label side_ekul_vivant:
     $ stats.visited.add("ekul_vivant")
 
+    nvl clear
+    window hide
+    scene black
+    with fade
+    play music "undying_love.mp3" fadein 1.0 fadeout 1.0 
+    window show
+
     """
     Lorsqu'il rentra dans le château pour vérifier si, par miracle, le comte d'Ekul n'avait pas survécu, William fut surpris de trouver celui-ci assis sur un fauteuil, un cigare à la bouche.
     """
 
     ekul "Ah, William. J'ai peur que votre visite chez moi ne vous ait... transformé."
 
-    william """
+    william vampire """
     Effectivement, monsieur le Comte.
 
     Mais je suis heureux de vous voir en vie.
@@ -149,6 +156,26 @@ label side_ekul_vivant:
 
     Vous n'auriez pas un autre de ces cigares, par hasard ?"""
 
+    if stats.ekul >= 5 and "appetits" in stats.flags:
+        ekul "Bien sûr."
+
+        """Il ouvrit la petite boîte qu'il avait à côté de lui, et en tendit un à William.
+
+        Tandis que celui-ci le mettait dans sa bouche, Vlad se leva et gratta une allumette."""
+
+        play sound "cigarette.mp3"
+
+        william "Merci."
+
+        ekul "De rien."
+
+        "Un sourire carnassier aux lèvres, il posa sa main sur la joue du peintre."
+
+        "Celui-ci écarta le cigare de sa bouche et sourit à son tour."
+
+        william "Monsieur le comte serait-il d'humeur à... {i}élargir l'horizon de ses appétits{/i} ?"
+
+        "Pour toute réponse, le comte d'Ekul l'embrassa avec fougue."
     jump epilogue
 
     

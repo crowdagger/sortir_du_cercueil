@@ -11,7 +11,7 @@ screen stats:
                 $ prudence = (100.0 * stats.prudence)/stats.prudence_max
                 $ chatoyance = (100.0 * stats.chatoyance)/stats.chatoyance_max
                 $ rebellion = (100.0 * stats.rebellion)/stats.rebellion_max
-                $ maugreance = (100.0 * stats.maugreance)/stats.maugreance_max
+                $ compassion = (100.0 * stats.compassion)/stats.compassion_max
                 $ artiste = (100.0 * stats.artiste)/stats.artiste_max
                 $ meticulosite = (100.0 * len(stats.visited))/ 5
                                 
@@ -31,9 +31,9 @@ screen stats:
                 text "[rebellion:.0f] %" xalign 0.5
                 bar value rebellion range 100.0 xsize 150
 
-                text "MAUGREANCE" xalign 0.5
-                text "[maugreance:.0f] %" xalign 0.5
-                bar value maugreance range 100.0 xsize 150
+                text "COMPASSION" xalign 0.5
+                text "[compassion:.0f] %" xalign 0.5
+                bar value compassion range 100.0 xsize 150
 
                 text "ARTISTE" xalign 0.5
                 text "[artiste:.0f] %" xalign 0.5

@@ -46,6 +46,8 @@ Decisions : {a=https://opengameart.org/content/decisions-1}FrancisLeeMusic{/a} (
 
 Oops : {a=https://opengameart.org/content/oops}Alexandr Zhelanov{/a} (CC-By)
 
+Undying Love : {a=https://opengameart.org/content/undying-love}Stefan Großmann{/a} (CC-By)
+
 {a=https://opengameart.org/content/funny-and-cute-acoustic-ending-theme}A second a day from birth{/a} : {a=https://airyluvs.com/}SOUND AIRYLUVS by ISAo{/a} (OGA-By)
 
 {a=https://opengameart.org/content/no-joke-is-all-that-counts}No Joke is All That Counts{/a} : {a=https://www.patreon.com/Snabisch}Snabisch{/a} (CC-By)
@@ -83,15 +85,15 @@ label credits:
     window hide
     scene black with dissolve
 
-    play music "no_joke_is_all_that_counts.mp3" fadein 1.0 fadeout 1.0
+    play music "no_joke_is_all_that_counts.mp3" fadein 1.0 fadeout 1.0 noloop
 
     python:
         if stats.nonchalance_max == 0:
             stats.nonchalance_max = 1
         if stats.artiste_max == 0:
             stats.artiste_max = 1
-        if stats.maugreance_max == 0:
-            stats.maugreance_max = 1
+        if stats.compassion_max == 0:
+            stats.compassion_max = 1
         if stats.rebellion_max == 0:
             stats.rebellion_max = 1
         if stats.chatoyance_max == 0:
