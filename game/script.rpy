@@ -35,7 +35,9 @@ default stats.compassion = 0
 default stats.compassion_max = 0
 default stats.artiste = 0
 default stats.artiste_max = 0
+default stats.ekul = 0
 default stats.visited = Set()
+default stats.flags = Set()
 
 init python:
     config.window_hide_transition = dissolve
@@ -165,7 +167,6 @@ label start:
 
     $ stats.prudence_max += 1
     $ stats.nonchalance_max += 1
-    $ chien = False
     menu:
         "S'inquiéter":
             $ stats.prudence += 1
@@ -185,7 +186,7 @@ label start:
             angele "Par contre, il y en a un {i}derrière{/i} toi."
         "Plaisanter":
             $ stats.nonchalance += 1
-            $ chien = True
+            $ stats.flags.add("chien")
             william "C'est peut-être juste quelqu'un qui joue avec un chien."
 
             angele """Plusieurs chiens, alors.
@@ -199,7 +200,7 @@ label start:
 
     play music "last_encounter.mp3" fadein 1.0 fadeout 1.0 volume 0.5
 
-    if chien:
+    if "chien" in stats.flags:
         "William se retourna lentement et aperçut effectivement un {a=call:animal}animal{/a} qui le fixait de son regard jaune."
     else:
         "William se retourna lentement et aperçut effectivement un animal qui le fixait de son regard jaune."
@@ -302,6 +303,7 @@ label start:
     
             angele "Hum, je crois que tu étais censé lui faire un baise-main."
         "Faire un baise-main":
+            $ stats.flags.add("baise_main")
             $ stats.chatoyance += 1
             """William posa un genou à terre pour lui faire un baise-main.
 
@@ -392,6 +394,7 @@ label scene_2:
             "William marmonnait trop bas pour que son interlocuteur l’entende."
         "S'incliner":
             $ stats.chatoyance += 1
+            $ stats.ekul += 1
             """
             William s'inclina aussi bas qu'il le pouvait.
 
@@ -406,6 +409,9 @@ label scene_2:
     angele "Faudrait voir à changer de disque."
 
     "De son côté, William s’inclinait respectueusement et serrait la main du comte, ou, plutôt, se faisait {a=call:main}broyer la main{/a} par lui."
+
+    if "baise_main" in stats.flags:
+        "Il regretta de ne pas lui avoit plutôt fait un baise-main. C'était clairement moins risqué."
 
     william "Ravi de faire votre connaissance, Monsieur le comte."
 
