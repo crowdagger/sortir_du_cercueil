@@ -416,9 +416,12 @@ label scene_2:
     jump scene_3
 
 label scene_3:
+    nvl clear
+    window hide
     scene black
     with fade
-    
+
+    window show
     "Le comte d’Ekul fit s’asseoir son invité à une grande table où avait été servi un dîner copieux."
 
     ekul "Excusez-moi de ne pas vous accompagner, mais j’ai déjà mangé."
@@ -456,8 +459,13 @@ label scene_3:
     jump scene_4
 
 label scene_4:
+    nvl clear
+    window hide
     scene black
     with fade
+
+    window show
+
     """
     Le comte partagea ce qui restait de la bouteille entre son verre et celui de William.
 
@@ -517,8 +525,13 @@ label scene_4:
     jump scene_5
 
 label scene_5:
+    nvl clear
+    window hide
     scene black
     with fade
+
+    window show
+
     """
     William se réveilla en grognant et se demanda où il était.
 
@@ -666,11 +679,13 @@ label scene_5:
     jump scene_6
 
 label scene_6:
+    nvl clear
+    window hide
     scene black
     with fade
-
     play music "vampires_piano.mp3" fadein 1.0 fadeout 1.0 volume 0.5
-
+    window show
+    
     """
     William fut une nouvelle fois le seul à dîner, même si le comte et Carimall discutaient à côté de lui pendant qu’il mangeait.
 
@@ -714,6 +729,13 @@ label scene_6:
     jump scene_7
 
 label scene_7:
+    nvl clear
+    window hide
+    scene black
+    with fade
+
+    window show
+
     """
     William termina la première ébauche du tableau à peine avant l’aube.
     """
@@ -777,8 +799,12 @@ label scene_7:
     jump scene_8
 
 label scene_8:
+    nvl clear
+    window hide
     scene black
     with fade
+    window show
+
 
     """
     Le soleil se levait sur un paysage effectivement magnifique qui plaisait beaucoup à William, surtout vu d’une des tours du château.
@@ -814,8 +840,11 @@ label scene_8:
     jump scene_9
 
 label scene_9:
+    nvl clear
+    window hide
     scene black
     with fade
+    window show
 
     """
     Le comte d’Ekul se retourna dans son cercueil et réalisa que quelque chose ne tournait pas rond.
@@ -828,8 +857,11 @@ label scene_9:
     jump scene_10
 
 label scene_10:
+    nvl clear
+    window hide
     scene black
     with fade
+    window show
     
     carimall "C’est… magnifique…"
 
@@ -934,8 +966,12 @@ label scene_10:
     jump scene_11
 
 label scene_11:
+    nvl clear
+    window hide
     scene black
     with fade
+    window show
+
 
     angele "Will ?"
 
@@ -956,8 +992,11 @@ label scene_11:
     jump scene_12
 
 label scene_12:
+    nvl clear
+    window hide
     scene black
     with fade
+    window show
 
     play music "dream_raid.mp3" fadein 1.0 fadeout 1.0 volume 0.5
 
@@ -1135,10 +1174,12 @@ label scene_12:
     jump scene_13
 
 label scene_13:
+    nvl clear
+    window hide
     scene black
     with fade
-
     play music "decisions.mp3" fadeout 1.0 fadein 1.0 volume 0.5
+    window show
 
     """
     William sentait son esprit commencer à flotter au-dessus de son corps dans un état extatique qui ne peut d’ordinaire être atteint qu’après avoir consommé quantité de substances illicites.
@@ -1244,10 +1285,12 @@ label scene_13:
     jump epilogue
 
 label epilogue:
+    nvl clear
+    window hide
     scene black
     with fade
-
     play music "oga_a_second_a_day_from_birth.mp3" fadein 1.0 fadeout 1.0 
+    window show
 
     """
     William décida, en allumant un de ces énormes cigares dont lui avait fait cadeau le comte pour le remercier de sa visite, que le voyage de retour s’annonçait plus sympathique que celui de l’aller.
