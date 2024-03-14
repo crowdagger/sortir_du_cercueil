@@ -11,7 +11,7 @@ define ekul = Character("Comte d'Ekul", image = "ekul", color = "#ec2e5e", kind=
 define femme1 = Character("Femme mystérieuse", color = "#d442c3", kind=default_kind)
 define femme2 = Character("Femme intrigante", color = "#d442a8", kind=default_kind)
 define femme3 = Character("Femme mystérieuse", kind=default_kind)
-define inqui = Character("Inquisiteur", color = "#425fd4", kind=default_kind)
+define inqui = Character("Inquisiteur", image = "inqui", color = "#425fd4", kind=default_kind)
 define narrator = nvl_narrator
 define menu = nvl_menu
 
@@ -19,6 +19,7 @@ image side william = "william.png"
 image side angele = "angele.png"
 image side carimall = "carimall.png"
 image side ekul = "ekul.png"
+image side inqui = "inqui.png"
 
 default stats.nonchalance = 0
 default stats.nonchalance_max = 0
