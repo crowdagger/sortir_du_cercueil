@@ -3,15 +3,15 @@
 define default_kind = nvl
 
 
-define angele = Character('Angèle', kind=default_kind)
-define william = Character("William", kind=default_kind)
-define loup = Character("Loup", kind=default_kind)
-define carimall = Character("Carimall", kind=default_kind)
-define ekul = Character("Comte d'Ekul", kind=default_kind)
-define femme1 = Character("Femme mystérieuse", kind=default_kind)
-define femme2 = Character("Femme mystérieuse", kind=default_kind)
+define angele = Character('Angèle', color = "#52d442", kind=default_kind)
+define william = Character("William", color = "#6c42d4", kind=default_kind)
+define loup = Character("Loup", color = "#9c9ea8", kind=default_kind)
+define carimall = Character("Carimall", color = "#a02eec", kind=default_kind)
+define ekul = Character("Comte d'Ekul", color = "#ec2e5e", kind=default_kind)
+define femme1 = Character("Femme mystérieuse", color = "#d442c3", kind=default_kind)
+define femme2 = Character("Femme intrigante", color = "#d442a8", kind=default_kind)
 define femme3 = Character("Femme mystérieuse", kind=default_kind)
-define inqui = Character("Inquisiteur", kind=default_kind)
+define inqui = Character("Inquisiteur", color = "#425fd4", kind=default_kind)
 define narrator = nvl_narrator
 define menu = nvl_menu
 
@@ -28,6 +28,11 @@ default stats.maugreance_max = 0
 default stats.artiste = 0
 default stats.artiste_max = 0
 default stats.visited = Set()
+
+init python:
+    config.window_hide_transition = dissolve
+    config.window_show_transition = dissolve
+
 
 label start:
     scene black
@@ -126,7 +131,7 @@ label start:
             Elle a aussi dit que les choses là-bas n’étaient pas ce qu’elles semblaient être et que le mal était caché là où on ne le soupçonnait pas.
             """
 
-    angele "Heureusement que tu aimes bien les mâles, alors." 
+    angele "Heureusement que tu {a=call:gay}aimes bien les mâles{/a}, alors." 
 
     william """
     Ha, ha.
@@ -152,6 +157,7 @@ label start:
 
     $ stats.prudence_max += 1
     $ stats.nonchalance_max += 1
+    $ chien = False
     menu:
         "S'inquiéter":
             $ stats.prudence += 1
@@ -171,6 +177,7 @@ label start:
             angele "Par contre, il y en a un {i}derrière{/i} toi."
         "Plaisanter":
             $ stats.nonchalance += 1
+            $ chien = True
             william "C'est peut-être juste quelqu'un qui joue avec un chien."
 
             angele """Plusieurs chiens, alors.
@@ -184,11 +191,12 @@ label start:
 
     play music "last_encounter.mp3" fadein 1.0 fadeout 1.0 volume 0.5
 
-    """
-    William se retourna lentement et aperçut effectivement un animal qui le fixait de son regard jaune.
+    if chien:
+        "William se retourna lentement et aperçut effectivement un {a=call:animal}animal{/a} qui le fixait de son regard jaune."
+    else:
+        "William se retourna lentement et aperçut effectivement un animal qui le fixait de son regard jaune."
 
-    Puis il en vit un autre sortir d’un fourré voisin.
-    """
+    "Puis il en vit un autre sortir d’un fourré voisin."
 
     $ stats.nonchalance_max += 1
     $ stats.prudence_max += 1
@@ -308,10 +316,15 @@ label start:
     jump scene_1
 
 label scene_1:
+   nvl clear
+   window hide
    scene black
    with fade
 
-   """Lorsqu’ils atteignirent le fiacre accidenté, le cocher était en train de terminer de réparer et ils ne durent attendre que quelques minutes avant de poursuivre leur chemin vers le château d’Ekul."""
+   window show
+   """Lorsqu’ils atteignirent le fiacre accidenté, le cocher était en train de terminer de réparer.
+
+   Ils ne durent donc attendre que quelques minutes avant de poursuivre leur chemin vers le château d’Ekul."""
 
    carimall """Je suis tellement heureuse de voir quelqu’un !
 
@@ -344,16 +357,17 @@ label scene_1:
    jump scene_2
 
 label scene_2:
+    nvl clear
+
+    window hide
     scene black
     with fade
 
     play music "chaos_castle.mp3" fadeout 1.0 fadein 1.0 volume 0.5
 
-   
+    window show
     """
-    Le comte d’Ekul attendait sur le pas de la porte.
-
-    C’était un homme de taille moyenne et de forte corpulence, aux cheveux noirs épais et broussailleux, qui avait quelque chose d’un peu effrayant dans le regard.
+    Le {a=call:ekul}comte d’Ekul{/a} attendait sur le pas de la porte, manifestement insensible au froid.
     """
 
     ekul """Bienvenue dans ma demeure !
@@ -383,7 +397,7 @@ label scene_2:
 
     angele "Faudrait voir à changer de disque."
 
-    "De son côté, William s’inclinait respectueusement et serrait la main du comte, ou, plutôt, se faisait broyer la main par lui."
+    "De son côté, William s’inclinait respectueusement et serrait la main du comte, ou, plutôt, se faisait {a=call:main}broyer la main{/a} par lui."
 
     william "Ravi de faire votre connaissance, Monsieur le comte."
 
@@ -397,7 +411,7 @@ label scene_2:
 
     william "Et votre fille ?"
 
-    ekul "Oh, elle est repartie. Elle aime se promener la nuit. Venez, suivez-moi."
+    ekul "Oh, elle est repartie. Elle aime se {a=call:side_nuit}promener la nuit{/a}. Venez, suivez-moi."
 
     jump scene_3
 

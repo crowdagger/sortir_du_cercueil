@@ -5,7 +5,7 @@ screen stats:
             spacing 20
             text "STATISTIQUES":
                 xalign 0.5
-                grid 3 7:
+            grid 3 7:
                 spacing 20
                 $ nonchalance = (100.0 * stats.nonchalance)/stats.nonchalance_max
                 $ prudence = (100.0 * stats.prudence)/stats.prudence_max

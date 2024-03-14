@@ -40,3 +40,57 @@ label hallucination:
    return
 
 
+label gay:
+   """
+   William vivait maintenant bien son homosexualité, mais ça n'avait pas toujours été le cas.
+
+   L'adolescence avait été particulièrement difficile.
+
+   Est-ce que c'était à cause de ça qu'il s'était accompagnée d'une maudite personnalité imaginaire ?
+   """
+
+   $stats.visited.add("gay")
+
+   return
+
+
+label animal:
+    "C'était, clairement, un {i}très{/i} gros chien."
+    
+    $stats.visited.add("animal")
+
+    return 
+
+
+label ekul:
+    "C’était un homme de taille moyenne et de forte corpulence, aux cheveux noirs épais et broussailleux, qui avait quelque chose d’un peu effrayant dans le regard."
+
+    $ stats.visited.add("ekul")
+
+    return 
+
+
+label main:
+    """
+    William serra et desserra les doigts pour tenter d'y faire circuler à nouveau circuler le sang.
+
+    Il n'avait jamais compris ces gens qui voulaient toujours montrer qu'ils étaient les plus forts, y compris dans un geste aussi banal.
+    """
+
+    $ stats.visited.add("main")
+
+    return 
+
+label side_nuit:
+   """
+   William fronça les sourcils.
+
+   Une telle promenade nocturne, et par un temps pareil, ne lui semblait pas très raisonnable.
+
+   Il haussa cependant les épaules.
+
+   Clairement, depuis qu'il avait mis les pieds dans ce fiacre, le domaine du raisonnable se tenait solidement à l'écart."""
+
+   $ stats.visited.add("nuit")
+
+   return 
