@@ -152,7 +152,7 @@ label side_ekul_vivant:
     "William arbora un sourire, et s'approcha du fauteuil où était assis le comte."
 
     william """
-    Hé bien, dans ce cas, monsieur le Comte.
+    Hé bien, dans ce cas, Vlad.
 
     Vous n'auriez pas un autre de ces cigares, par hasard ?"""
 
@@ -176,6 +176,7 @@ label side_ekul_vivant:
         william "Monsieur le comte serait-il d'humeur à... {i}élargir l'horizon de ses appétits{/i} ?"
 
         "Pour toute réponse, le comte d'Ekul l'embrassa avec fougue."
+        jump fin
     jump epilogue
 
     
