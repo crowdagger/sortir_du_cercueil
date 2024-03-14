@@ -515,7 +515,7 @@ label scene_4:
             william "Ça compte pas."
         "Contredire":
             $ stats.rebellion += 1
-            "Le compte avait pris un air grave, mais William secouait la tête d'un air tout aussi convaincu."
+            "Le comte avait pris un air grave, mais William secouait la tête d'un air tout aussi convaincu."
 
             william """Je peux pas vous laisser dire ça, Comte.
 
@@ -534,7 +534,33 @@ label scene_4:
 
     Je devrai m’absenter jusqu’en fin d’après-midi."""
 
-    william "Boulot, boulot, hein ?"
+    $ stats.compassion_max += 1
+    $ stats.nonchalance_max += 1
+    $ stats.prudence_max += 1
+    menu:
+        "Plaisanter":
+            $ stats.nonchalance += 1
+            william "Boulot, boulot, hein ?"
+        "Réfléchir":
+            $ stats.prudence += 1
+            """William fronça les sourcils. Cela voulait donc dire que le comte ne reviendrait qu'à la nuit tombée.
+
+            Drôle de coïncidence."""
+        "Déplorer":
+            $ stats.ekul += 1
+            $ stats.compassion += 1
+            william "Quel dommage."
+
+            "Il fit un petit sourire au comte."
+
+            william "En tout cas, j'ai adoré dîner votre compagnie."
+
+            ekul "Et surtout boire !"
+
+            william "Ouais. Surtout boire."
+
+            
+            
 
     jump scene_5
 
@@ -636,7 +662,7 @@ label scene_5:
             """
             Il n'eut pas le temps de parvenir à s'expliquer.
 
-            Le compte d'Ekul venait de débarquer en trombe dans la pièce."""
+            Le comte d'Ekul venait de débarquer en trombe dans la pièce."""
             
             
     "Il semblait furieux."
@@ -664,6 +690,7 @@ label scene_5:
     menu:
         "Plaisanter":
             $ stats.nonchalance += 1
+            $ stats.ekul = 0
             william "Euh, ça va."
 
             william "Sans vouloir vous vexer, Comte, j’ai dit des {i}beaux{/i} gars."
@@ -674,6 +701,7 @@ label scene_5:
 
             ekul "Bien. Avez-vous mangé ?"
         "S'offusquer":
+            $ stats.ekul += 1
             $ stats.rebellion += 1
             william "Votre réaction est un tantinet vexante, monsieur le Comte."
 
@@ -701,7 +729,7 @@ label scene_6:
     window show
     
     """
-    William fut une nouvelle fois le seul à dîner, même si le comte et Carimall discutaient à côté de lui pendant qu’il mangeait.
+    William fut une nouvelle fois le seul à dîner, même si {a=call:side_comte_carimall}le comte et Carimall{/a} discutaient à côté de lui pendant qu’il mangeait.
 
     Ensuite, il suivit la jeune femme pour commencer à peindre son portrait.
 
@@ -789,6 +817,8 @@ label scene_7:
 
     william "Et rester là ?"
 
+    play sound "cigarette.mp3" 
+    
     "Il s'alluma une cigarette."
 
     william """
@@ -997,11 +1027,57 @@ label scene_10:
 
     "Le jeune homme essaya péniblement de reprendre sa respiration pendant que son hôte s’éloignait."
 
-    angele "Il a de la poigne, ce type."
+    $ stats.prudence_max += 1
+    $ stats.compassion_max += 1
+    menu:
+        "Laisser partir":
+            "William se releva avec difficulté."
+            
+            angele "Il a de la poigne, ce type."
 
-    "William se releva avec difficulté."
+            william "Ouais."
+            $ stats.prudence += 1
+        "Apostropher":
+            $ stats.compassion += 1
+            $ stats.ekul += 1
+            william "Vous vous trompez !"
 
-    william "Ouais."
+            """Le comte se retourna, manifestement courroucé, pendant que William se relevait avec difficulté.
+
+            Il aurait manifestement préféré que son interlocuteur reste à terre."""
+
+            angele "Tu ne sais pas quand la fermer, hein ?"
+
+            "William ignora son hallucination, et s'adressa plutôt au comte."
+
+            william """
+            Je comprends votre réaction. Vous voulez la protéger.
+
+            Mais n'avez-vous pas peur de l'étouffer ?"""
+
+            "Le comte fit un nouveau pas en sa direction, clairement irrité. Au soulagement de William, il s'interrompit néanmoins."
+
+            ekul "Qu'est-ce que vous en savez, hein ?"
+
+            "Sans se démonter, William plongea ses yeux dans ceux du comte. "
+
+            william """
+            Qu'est-ce que j'en sais ?
+
+            J'ai vécu dans l'ombre, moi aussi.
+
+            Quand je suis sorti à la lumière du jour, j'ai été brûlé, oui.
+
+            Est-ce que je regrette ?
+
+            Non. Ça en valait la peine. Même si ça fait mal, parfois."""
+
+            "Le comte secoua la tête."
+
+            ekul "Vous ne savez pas de quoi vous parlez."
+
+            "Il se retourna à nouveau et partit, laissant William seul avec son hallucination."
+
 
     angele "« Vous n’avez aucune idée ce qu’elle est », Non mais, tu l’as entendu ?"
 
@@ -1100,7 +1176,13 @@ label scene_12:
 
     Pas étonnant. Il faisait encore jour.
 
-    Le cocher, en revanche, semblait mieux s’en sortir, puisqu’il se transforma en loup géant et parvint à égorger deux hommes et à arracher le cœur d’un troisième avant de mourir d’un carreau en argent qu’il reçut dans la tête.
+    Le cocher, en revanche, semblait mieux s’en sortir, puisqu’il se transforma en loup géant et parvint à égorger deux hommes et à arracher le cœur d’un troisième.
+    """
+
+    play sound "arbalete.flac"
+
+    """
+    Avant de mourir d’un carreau en argent qu’il reçut dans la tête.
 
     Le peintre avança, remarqua que personne ne faisait attention à lui et ramassa une arbalète qu’un homme avait fait tomber.
 
@@ -1113,11 +1195,43 @@ label scene_12:
 
     """Il se jeta en hurlant sur un des hommes.
 
-    Mais celui-ci parvint à plonger un pieu dans son corps et Ekul s’écroula, pendant que sa fille prenait la fuite, suivie des trois femmes que William avait croisées la veille.
+    Mais celui-ci parvint à plonger un pieu dans son corps et Ekul s’écroula.
 
-    Le soldat n’eut cependant pas le temps de se glorifier de son acte, puisqu’il reçut un carreau en pleine tête et mourut aussitôt.
+    Est-ce qu'il était mort ?"""
 
-    Les regards des deux hommes restants se tournèrent vers le peintre."""
+    $ stats.prudence_max += 1
+    $ stats.rebellion_max += 1
+    menu:
+        "Devenir fou":
+            $ stats.rebellion += 1
+            $ stats.ekul += 1
+            william "COMTE !"
+
+            """Pendant qu'il hurlait, Carimall prenait la fuite, suivie des trois femmes que William avait croisées la veille.
+
+            Super. Voilà qu'il se retrouvait seul face à trois soldats.
+
+            Tous le regardaient d'un air interrogateur, ne comprenant manifestement pas ce qu'il faisait là.
+
+            William décida de profiter de l'effet de surprise et déchargea son arbalète sur le soldat qui avait planté un pieu dans son hôte.
+            """
+            
+            play sound "arbalete.flac"
+            "Le carreau l'atteignit en pleine tête et il mourut aussitôt."
+
+            "Les regards des deux hommes restants étaient passés d'interrogateurs à haineux."
+        "Garder calme":
+            $ stats.prudence += 1
+
+            """
+            Pendant ce temps, sa fille prenait la fuite, suivie des trois femmes que William avait croisées la veille.
+            """
+
+            play sound "arbalete.flac"
+            """
+            Le soldat qui était venu au bout du comte cependant pas le temps de se glorifier de son acte, puisqu’il reçut un carreau en pleine tête et mourut aussitôt.
+
+            Les regards des deux hommes restants se tournèrent vers le peintre."""
 
     inqui "Qu’avez-vous fait, sombre idiot ?"
 
@@ -1131,6 +1245,8 @@ label scene_12:
 
     william "…vampires ?"
 
+    play sound "arbalete.flac"
+    
     "Il envoya en souriant un nouveau carreau dans la tête du soldat le moins gradé."
 
     william "Il aurait fallu que je sois aveugle pour ne pas le réaliser plus tôt."
@@ -1358,6 +1474,8 @@ label scene_13:
 
     carimall "Oh."
 
+    play sound "cigarette.mp3" 
+
     "William s'alluma une cigarette. Il estimait l'avoir bien méritée."
 
     william """Désolé.
@@ -1366,7 +1484,10 @@ label scene_13:
 
     Je veux dire, t’es comme, genre, ma mère vampirique, non ?"""
 
-    jump epilogue
+    if stats.ekul >= 3:
+        jump side_ekul_vivant
+    else:
+        jump epilogue
 
 label epilogue:
     nvl clear

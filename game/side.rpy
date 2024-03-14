@@ -109,3 +109,46 @@ label side_cloitree:
 
     $ stats.visited.add("cloitree")
     return
+
+label side_comte_carimall:
+    """
+    Le comte semblait cependant beaucoup moins disert qu'hier. Était-ce parce qu'il n'avait pas picolé ?
+
+    Ou alors était-ce la présence de sa fille qui expliquait son changement de comportement ?"""
+
+    $ stats.visited.add("comte_carimall")
+    return 
+
+
+label side_ekul_vivant:
+    $ stats.visited.add("ekul_vivant")
+
+    """
+    Lorsqu'il rentra dans le château pour vérifier si, par miracle, le comte d'Ekul n'avait pas survécu, William fut surpris de trouver celui-ci assis sur un fauteuil, un cigare à la bouche.
+    """
+
+    ekul "Ah, William. J'ai peur que votre visite chez moi ne vous ait... transformé."
+
+    william """
+    Effectivement, monsieur le Comte.
+
+    Mais je suis heureux de vous voir en vie.
+    """
+
+    ekul """
+    Ce n'est pas exactement le bon terme, non.
+
+    Et appelez-moi Vlad, voulez-vous ?
+
+    Je vous dois la non-vie, après tout."""
+
+    "William arbora un sourire, et s'approcha du fauteuil où était assis le comte."
+
+    william """
+    Hé bien, dans ce cas, monsieur le Comte.
+
+    Vous n'auriez pas un autre de ces cigares, par hasard ?"""
+
+    jump epilogue
+
+    
