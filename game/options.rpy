@@ -47,6 +47,11 @@ MOTEUR
 {a=https://www.renpy.org/}Ren'Py{/a}
 
 
+ILLUSTRATIONS
+
+{a=https://pixabay.com/fr/photos/nuit-ch%C3%A2teau-corbeau-fantaisie-3129908/Illustration de titre{/a} : {a=https://pixabay.com/fr/users/peterpang252-7818586/}peterpang252 sur Pixabay{/a}
+
+
 MUSIQUES
 
 Dark Quest : {a=https://opengameart.org/content/dark-quest}Alexandr Zhelanov{/a} (CC-By)
@@ -143,8 +148,8 @@ define config.has_voice = True
 
 ## À l’entrée ou à la sortie du menu du jeu.
 
-define config.enter_transition = dissolve
-define config.exit_transition = dissolve
+define config.enter_transition = pixellate
+define config.exit_transition = pixellate
 
 
 ## Entre les écrans du menu du jeu.
@@ -154,12 +159,12 @@ define config.intra_transition = dissolve
 
 ## La transition qui sera utilisée après le chargement d’une partie.
 
-define config.after_load_transition = None
+define config.after_load_transition = pixellate
 
 
 ## La transition qui sera utilisé après la fin du jeu.
 
-define config.end_game_transition = None
+define config.end_game_transition = fade
 
 
 ## Il n’y a pas de variable pour configurer la transition en début de partie. À
@@ -191,7 +196,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Contrôle la vitesse du texte. La valeur par défaut, 0, est infinie. Toute
 ## autre valeur est le nombre de caractères tapés par seconde.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 20
 
 
 ## Le délai d’avancée automatique. Des nombres importants entraînent une longue
