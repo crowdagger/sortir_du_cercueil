@@ -1160,7 +1160,7 @@ label scene_12:
 
     play music "dream_raid.mp3" fadein 1.0 fadeout 1.0 volume 0.5
 
-
+    
     """
     William se précipita dans le hall d’entrée et arriva en plein milieu d’une bagarre générale.
 

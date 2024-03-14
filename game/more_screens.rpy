@@ -1,10 +1,15 @@
-screen stats:
+screen stats():
     window: 
         vbox:
             xalign 0.5
             spacing 20
             text "STATISTIQUES":
                 xalign 0.5
+            $ secondes = renpy.get_game_runtime()
+            $ heures = int(secondes // 3600)
+            $ minutes = int(secondes - heures * 3600) //60
+            $ secondes = int(secondes - heures * 3600 - minutes * 60)
+            text "TEMPS ÉCOULÉ : [heures]h[minutes]'[secondes]''" 
             grid 3 7:
                 spacing 20
                 $ nonchalance = (100.0 * stats.nonchalance)/stats.nonchalance_max
@@ -41,5 +46,6 @@ screen stats:
 
                 text "MÉTICULOSITÉ" xalign 0.5
                 text "[meticulosite:.0f] %" xalign 0.5
-                bar value meticulosite range 100.0 xsize 150 left_bar "gui/bar/left_magenta.png" right_bar "gui/bar/right_magenta.png" 
+                bar value meticulosite range 100.0 xsize 150 left_bar "gui/bar/left_magenta.png" right_bar "gui/bar/right_magenta.png"
+            
                 

@@ -106,7 +106,7 @@ define config.end_game_transition = fade
 ## Après le début de la partie, cela peut-être changé avec les instructions
 ## « window show », « window hide » et « window auto ».
 
-define config.window = "auto"
+define config.window = "hide"
 
 
 ## Transitions utilisées pour afficher ou cacher la fenêtre de dialogue
