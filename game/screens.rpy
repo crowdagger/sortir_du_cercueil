@@ -1346,7 +1346,10 @@ screen nvl(dialogue, items=None):
 
 
 screen nvl_dialogue(dialogue):
+    $ max_len = len(dialogue)
+    $ i = 0
     for d in dialogue:
+        $ i += 1
         window:
             id d.window_id
 
@@ -1358,8 +1361,18 @@ screen nvl_dialogue(dialogue):
                     text d.who:
                         id d.who_id
 
-                text d.what:
-                    id d.what_id
+                # if i == max_len:
+                #     $ wat = renpy.filter_text_tags(d.what, allow=gui.history_allow_tags)
+                #     text wat:
+                #         id d.what_id
+                # else:
+                if i < max_len:
+                    $ le_texte = renpy.filter_text_tags(d.what, allow=gui.history_allow_tags)
+                    text le_texte:
+                        id d.what_id
+                else:
+                    text d.what:
+                        id d.what_id
 
 
 ## Ce paramètre contrôle le maximum d’entrée dans le mode NVL qui peuvent être
