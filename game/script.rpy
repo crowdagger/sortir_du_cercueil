@@ -2,6 +2,7 @@
 
 define default_kind = nvl
 
+default cromwey_name = "Inquisiteur"
 
 define angele = Character('Angèle', image = "angele", color = "#52d442", kind=default_kind)
 default william = Character("William", image = "william", color = "#6c42d4", kind=default_kind)
@@ -11,7 +12,7 @@ define ekul = Character("Comte d'Ekul", image = "ekul", color = "#ec2e5e", kind=
 define femme1 = Character("Femme mystérieuse", color = "#d442c3", kind=default_kind)
 define femme2 = Character("Femme intrigante", color = "#d442a8", kind=default_kind)
 define femme3 = Character("Femme mystérieuse", kind=default_kind)
-define inqui = Character("Inquisiteur", image = "inqui", color = "#425fd4", kind=default_kind)
+define inqui = Character("[cromwey_name]", dynamic = True, image = "inqui", color = "#425fd4", kind=default_kind)
 define narrator = nvl_narrator
 define menu = nvl_menu
 
@@ -1208,7 +1209,7 @@ label scene_12:
 
             """Pendant qu'il hurlait, Carimall prenait la fuite, suivie des trois femmes que William avait croisées la veille.
 
-            Super. Voilà qu'il se retrouvait seul face à trois soldats.
+            Fabuleux. Voilà qu'il se retrouvait seul face à trois soldats.
 
             Tous le regardaient d'un air interrogateur, ne comprenant manifestement pas ce qu'il faisait là.
 
@@ -1259,7 +1260,7 @@ label scene_12:
     Le jeune homme lâcha son arbalète devenue inutile et parvint de justesse à ramasser une épée sur un cadavre pour parer le coup.
     """
 
-    $ inqui = "Évêque Cromwey"
+    $ cromwey_name = "Évêque Cromwey"
 
     inqui "Je suis l’évêque Cromwey !"
 
