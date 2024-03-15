@@ -1,6 +1,4 @@
-﻿sdefine config.window = "hide"
-
-define default_kind = nvl
+﻿define default_kind = nvl
 
 default cromwey_name = "Inquisiteur"
 
@@ -1296,7 +1294,9 @@ label scene_12:
 
     inqui "Prépare-toi à mourir !"
 
-    """William se baissa juste à temps pour éviter la lame, envoya un coup de pied dans les tibias de son adversaire et se précipita dans les escaliers en colimaçon."""
+    """William se baissa juste à temps pour éviter la lame.
+
+    Il envoya ensuite un coup de pied dans les tibias de son adversaire et se précipita dans les escaliers en colimaçon."""
 
     angele "Je crois que tu aurais dû arrêter le tabac."
 
@@ -1364,8 +1364,8 @@ label scene_12:
         "Réfléchir":
             "Pas au courant de quoi ? Sûrement pas juste qu'elle était une vampire, si ? Sinon, pourquoi aurait-elle été {i}pire{/i} que les autres ?"
             $ stats.artiste += 1
-            if len(stats.doutes >= 2):
-                stats.flags.add("compris")
+            if len(stats.doutes) >= 2:
+                $ stats.flags.add("compris")
                 "William sourit. Il venait de comprendre. Tout s'éclairait maintenant."
 
                 william "Oh, {i}ça{/i} ? {i}Bien sûr{/i} que je le savais."

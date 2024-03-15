@@ -200,7 +200,7 @@ label side_epuisement:
     """
     En tout cas, {i}William{/i} était épuisé.
 
-    Il n'était pas certain que ce soit le cas de son adversaire, et se demandait si celui-ci ne se contentait pas de jouer avec lui.
+    Il n'était pas certain que ce soit le cas de son adversaire, et il se demandait si celui-ci ne se contentait pas de jouer avec lui.
     """
 
     return
@@ -217,7 +217,7 @@ label scene_13_bis:
 
     carimall "Effectivement."
 
-        play sound "cigarette.mp3" 
+    play sound "cigarette.mp3" 
 
     "William s'alluma une cigarette. Il estimait l'avoir bien méritée."
 
@@ -235,7 +235,7 @@ label scene_13_bis:
 
     carimall "Oh."
 
-    willam "C'est {i}après{/i} que j'ai deviné."
+    william "C'est {i}après{/i} que j'ai deviné."
 
     "Carimall lui fit un sourire un coin."
 
