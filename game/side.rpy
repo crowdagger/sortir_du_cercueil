@@ -72,7 +72,7 @@ label ekul:
 
 label main:
     """
-    William serra et desserra les doigts pour tenter d'y faire circuler à nouveau circuler le sang.
+    William serra et desserra les doigts pour tenter d'y faire circuler le sang.
 
     Il n'avait jamais compris ces gens qui voulaient toujours montrer qu'ils étaient les plus forts, y compris dans un geste aussi banal.
     """
@@ -105,7 +105,7 @@ label side_cloitree:
     """
     « Cloitrée » n'était peut-être pas le bon terme : William avait pu constater que la jeune femme n'avait pas peur de sortir, y compris en pleine nuit.
 
-    Mais il n'était pas certain que ses balades en solitaire soient une grande source de satisfaction."""
+    Mais il n'était pas certain que ses balades en solitaire soient une grande source d'épanouissement."""
 
     $ stats.visited.add("cloitree")
     return
@@ -134,10 +134,10 @@ label side_ekul_vivant:
     Lorsqu'il rentra dans le château pour vérifier si, par miracle, le comte d'Ekul n'avait pas survécu, William fut surpris de trouver celui-ci assis sur un fauteuil, un cigare à la bouche.
     """
 
-    ekul "Ah, William. J'ai peur que votre visite chez moi ne vous ait... transformé."
+    ekul "Ah, William. J'ai peur que votre visite chez nous ne vous ait quelque peu... transformé."
 
     william vampire """
-    Effectivement, monsieur le Comte.
+    Effectivement, Monsieur le Comte.
 
     Mais je suis heureux de vous voir en vie.
     """
@@ -145,14 +145,14 @@ label side_ekul_vivant:
     ekul """
     Ce n'est pas exactement le bon terme, non.
 
-    Et appelez-moi Vlad, voulez-vous ?
+    Et appelez-moi Vladimir, voulez-vous ?
 
     Je vous dois la non-vie, après tout."""
 
     "William arbora un sourire, et s'approcha du fauteuil où était assis le comte."
 
     william """
-    Hé bien, dans ce cas, Vlad.
+    Hé bien, dans ce cas, Vladimir.
 
     Vous n'auriez pas un autre de ces cigares, par hasard ?"""
 
@@ -161,7 +161,7 @@ label side_ekul_vivant:
 
         """Il ouvrit la petite boîte qu'il avait à côté de lui, et en tendit un à William.
 
-        Tandis que celui-ci le mettait dans sa bouche, Vlad se leva et gratta une allumette."""
+        Tandis que celui-ci le mettait dans sa bouche, Vladimir se leva et gratta une allumette."""
 
         play sound "cigarette.mp3"
 
@@ -173,10 +173,84 @@ label side_ekul_vivant:
 
         "Celui-ci écarta le cigare de sa bouche et sourit à son tour."
 
-        william "Monsieur le comte serait-il d'humeur à... {i}élargir l'horizon de ses appétits{/i} ?"
+        william "Monsieur le Comte serait-il d'humeur à... {i}élargir l'horizon de ses appétits{/i} ?"
 
-        "Pour toute réponse, le comte d'Ekul l'embrassa avec fougue."
+        "Pour toute réponse, le comte d'Ekul l'embrassao avec fougue."
         jump fin
     jump epilogue
+
+label side_jamais:
+    $ stats.visited.add("jamais")
+
+    """
+    William réfléchit. D'accord, probablement pas {i}jamais{/i}, si ? Elle n'était probablement pas née comme ça.
+
+    Ou était-ce possible que si ?"""
+    return
+
+label side_chef:
+    $ stats.visited.add("chef")
+
+    """Du moins, William supposait qu'il s'agissait du chef, à cause de la magnifique cape blanche et de la coiffe qu'il portait."""
+    return
+
+label side_epuisement:
+    $ stats.visited.add("epuisement")
+
+    """
+    En tout cas, {i}William{/i} était épuisé.
+
+    Il n'était pas certain que ce soit le cas de son adversaire, et se demandait si celui-ci ne se contentait pas de jouer avec lui.
+    """
+
+    return
+
+
+label scene_13_bis:
+    $ stats.visited.add("13bis")
+
+    "William grimaça."
+
+    william "Facile à dire. C'est un changement que tu n'as pas eu à subir, hein ?"
+
+    "Carimall lui fit un petit sourire."
+
+    carimall "Effectivement."
+
+        play sound "cigarette.mp3" 
+
+    "William s'alluma une cigarette. Il estimait l'avoir bien méritée."
+
+    "Il devait cependant admettre que la douleur commençait à s'estomper. Ou qu'il se remettait à délirer, il n'était pas trop sûr."
+
+    carimall "Quand tu disais que ce que j’étais réellement n’avait pas d’importance…"
+
+    william "Oui ?"
+
+    carimall "Tu avais compris que je n'étais pas née fille ?"
+
+    "William secoua la tête."
+
+    william "Non, pas à ce moment là. Je pensais encore que tu parlais d'être une vampire."
+
+    carimall "Oh."
+
+    willam "C'est {i}après{/i} que j'ai deviné."
+
+    "Carimall lui fit un sourire un coin."
+
+    carimall "Dans tous les cas, merci. De ne pas m'avoir rejetée."
+
+    "William inspira une bouffée de tabac en lui jetant un regard triste. Y avait-il vraiment un mérite à ne pas s'être montré une ordure ? Est-ce que la barre était si basse ?"
+
+    carimall "Malheureusement, aucune chance qu'un homme aussi sensible soit attiré par les femmes, pas vrai ?"
+
+    "William éclata de rire."
+
+    william "Je ne sais pas. Je veux dire, ce n'est clairement pas mon cas, mais j'ose espérer que certains de {i}ces gens-là{/i} rehaussent un peu le niveau."
+
+    jump side_ekul_vivant
+
+    
 
     

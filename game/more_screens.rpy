@@ -18,7 +18,7 @@ screen stats():
                 $ rebellion = (100.0 * stats.rebellion)/stats.rebellion_max
                 $ compassion = (100.0 * stats.compassion)/stats.compassion_max
                 $ artiste = (100.0 * stats.artiste)/stats.artiste_max
-                $ meticulosite = (100.0 * len(stats.visited))/ 5
+                $ meticulosite = (100.0 * len(stats.visited))/ 12
                                 
                 text "NONCHALANCE" xalign 0.5
                 text "[nonchalance:.0f] %" xalign 0.5

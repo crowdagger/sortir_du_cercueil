@@ -1,4 +1,4 @@
-﻿define config.window = "hide"
+﻿sdefine config.window = "hide"
 
 define default_kind = nvl
 
@@ -38,6 +38,7 @@ default stats.artiste_max = 0
 default stats.ekul = 0
 default stats.visited = Set()
 default stats.flags = Set()
+default stats.doutes = Set()
 
 init python:
     config.window_hide_transition = dissolve
@@ -703,7 +704,7 @@ label scene_5:
             $ stats.ekul += 1
             $ stats.rebellion += 1
             $ stats.flags.add("appetits")
-            william "Votre réaction est un tantinet vexante, monsieur le Comte."
+            william "Votre réaction est un tantinet vexante, Monsieur le Comte."
 
             "Le comte l'examina de haut en bas, puis de bas en haut."
 
@@ -868,7 +869,7 @@ label scene_8:
 
 
     """
-    Le soleil se levait sur un paysage effectivement magnifique qui plaisait beaucoup à William, surtout vu d’une des tours du château.
+    L'aube se levait sur un paysage effectivement magnifique qui plaisait beaucoup à William, surtout vu d’une des tours du château.
 
     La vue plaisait beaucoup moins à Carimall, qui se tenait à l’abri du soleil derrière le renfoncement de la porte."""
 
@@ -938,7 +939,7 @@ label scene_10:
     carimall "C’est… magnifique…"
 
     """
-    Carimall était ébahie par le lever de soleil auquel elle n’avait pour l’heure jamais eu droit.
+    Carimall était ébahie par le lever de soleil auquel elle n’avait pour l’heure {a=call:side_jamais}jamais{/a} eu droit.
 
     William la regardait, un peu moins inquiet que quelques minutes plus tôt.
 
@@ -956,6 +957,18 @@ label scene_10:
     Tu sais…
 
     J’ai eu pas mal de changements dans ma vie ces derniers temps."""
+
+    if "jamais" in stats.visited:
+        $ stats.compassion_max += 1
+        $ stats.artiste_max += 1
+
+        menu:
+            "Compatir":
+                $ stats.compassion += 1
+            "Réfléchir":
+                $ stats.artiste += 1
+                $ stats.doutes.add("doute_1")
+                """{i}Ah{/i}, songea William. Voilà qui répondait à la question qu'il s'était posée plus tôt. La jeune femme n'était, effectivement, pas née vampire."""
 
     william "Je sais. Ça ne doit pas être facile."
 
@@ -981,6 +994,7 @@ label scene_10:
             william "Je m’en moque. Ce n’est pas ça qui…"
         "Réfléchir":
             $ stats.artiste += 1
+            $ stats.doutes.add("doute_2")
             """William allait la contredire, mais il hésita un moment.
 
             Il savait évidemment que la jeune femme était une vampire. Il n'était pas idiot.
@@ -1098,11 +1112,17 @@ label scene_10:
 
             angele "Par contre, je pense qu’au moins Carimall fait semblant de ne pas voir que tu fais semblant de ne pas voir qu’elle est une vampire."
 
-            william """Je ne sais pas.
+            if "doute_2" in stats.doutes:
+                william """Je m'étais dit la même chose tout à l'heure.
 
-            Mais je crois que je vais aller me coucher. Tes raisonnements me filent mal au crâne."""
+                Mais je crois que je vais aller me coucher. Ce genre de raisonnements me filent mal au crâne."""
+            else:
+                william """Je ne sais pas.
+
+                Mais je crois que je vais aller me coucher. Tes raisonnements me filent mal au crâne."""
         "Réfléchir":
             $ stats.artiste += 1
+            $ stats.doutes.add("doute_3")
             william """
             Je ne sais pas...
 
@@ -1186,7 +1206,7 @@ label scene_12:
 
     Le peintre avança, remarqua que personne ne faisait attention à lui et ramassa une arbalète qu’un homme avait fait tomber.
 
-    Le rapport de force avait évolué avec la mort du cocher car, s’il n’y avait plus que trois assaillants, dont celui qui paraissait être leur chef au vu de sa magnifique cape blanche, les habitants du château semblaient effrayés.
+    Le rapport de force avait évolué avec la mort du cocher car, s’il n’y avait plus que trois assaillants, en comptant leur {a=call:side_chef}chef{/a}, les habitants du château semblaient effrayés.
 
     Le comte regarda sa fille.
     """
@@ -1257,14 +1277,22 @@ label scene_12:
 
     """Il dégaina son épée et chargea.
 
-    Le jeune homme lâcha son arbalète devenue inutile et parvint de justesse à ramasser une épée sur un cadavre pour parer le coup.
+    Le jeune homme lâcha son arbalète devenue inutile et parvint de justesse à éviter le coup.
+
+    En faisant un pas en arrière, ill songea qu'il aurait mieux fait de privilégier ces carreaux pour cet adversaire, mais quand le vin était tiré, il fallait le boire.
+
+    Repérant une épée laissée par un cadavre, il la ramassa et se mit en garde. 
     """
 
     $ cromwey_name = "Évêque Cromwey"
 
     inqui "Je suis l’évêque Cromwey !"
 
-    "Il hurlait entre deux passes d’armes."
+    "Il frappa, mais William parvint à parer avec sa lame."
+
+    angele "Je ne savais pas que tu savais te servir d'une épée."
+
+    "Wiliam non plus, il devait bien l'admettre."
 
     inqui "Prépare-toi à mourir !"
 
@@ -1301,7 +1329,9 @@ label scene_12:
 
     """William eut à peine le temps de se retourner et de bloquer l’épée de l’évêque, qui paraissait au contraire rasséréné par un tel paysage.
 
-    Les deux combattants échangèrent quelques bottes, plutôt faiblardes à cause de leur épuisement, avant que d’un geste bien placé l’inquisiteur ne désarme son adversaire.
+    Les deux combattants échangèrent quelques bottes, plutôt faiblardes à cause de leur {a=call:side_epuisement}épuisement{/a}.
+
+    Puis, d'un geste bien placé, l’inquisiteur désarma son adversaire.
 
     Le peintre regarda son épée tomber dans le ravin que surplombait le château et déglutit."""
 
@@ -1324,10 +1354,29 @@ label scene_12:
 
     inqui "Oh, tu n’étais pas au courant, hein ?"
 
-    william """
-    Peu importe.
+    menu:
+        "Bravacher": 
+            $ stats.rebellion += 1
+            william """
+            Peu importe.
 
-    De toute façon, je préfère mille fois les vampires aux ordures de votre espèce."""
+            De toute façon, je préfère mille fois les vampires aux ordures de votre espèce."""
+        "Réfléchir":
+            "Pas au courant de quoi ? Sûrement pas juste qu'elle était une vampire, si ? Sinon, pourquoi aurait-elle été {i}pire{/i} que les autres ?"
+            $ stats.artiste += 1
+            if len(stats.doutes >= 2):
+                stats.flags.add("compris")
+                "William sourit. Il venait de comprendre. Tout s'éclairait maintenant."
+
+                william "Oh, {i}ça{/i} ? {i}Bien sûr{/i} que je le savais."
+
+                "C'était un mensonge, mais il ne vivrait probablement pas assez longtemps pour être démasqué."
+
+                william "Qu'est-ce que ça peut vous foutre ? Allez au diable !"
+
+            else:
+                william "Bah, dans tous les cas, elle ne peut pas être pire que {i}vous{/i} !"
+                
 
     inqui "Tu blasphèmes, misérable, alors qu’il te faudrait te repentir."
 
@@ -1419,6 +1468,9 @@ label scene_13:
     carimall """Par contre, je te préviens, ton corps va changer un peu, dans les jours qui vont venir…
 
     Mais il paraît que ce n’est pas si dramatique."""
+
+    if "compris" in stats.flags:
+        jump scene_13_bis
 
     william "« Il paraît » ?"
 
