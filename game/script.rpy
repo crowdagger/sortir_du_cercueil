@@ -1220,6 +1220,19 @@ label scene_12:
     $ stats.prudence_max += 1
     $ stats.rebellion_max += 1
     menu:
+        "Garder calme":
+            $ stats.prudence += 1
+
+            """
+            Pendant ce temps, sa fille prenait la fuite, suivie des trois femmes que William avait croisées la veille.
+            """
+
+            play sound "arbalete.flac"
+            """
+            Le soldat qui était venu au bout du comte cependant pas le temps de se glorifier de son acte, puisqu’il reçut un carreau en pleine tête et mourut aussitôt.
+
+            Les regards des deux hommes restants se tournèrent vers le peintre."""
+
         "Devenir fou":
             $ stats.rebellion += 1
             $ stats.ekul += 2
@@ -1238,18 +1251,6 @@ label scene_12:
             "Le carreau l'atteignit en pleine tête et il mourut aussitôt."
 
             "Les regards des deux hommes restants étaient passés d'interrogateurs à haineux."
-        "Garder calme":
-            $ stats.prudence += 1
-
-            """
-            Pendant ce temps, sa fille prenait la fuite, suivie des trois femmes que William avait croisées la veille.
-            """
-
-            play sound "arbalete.flac"
-            """
-            Le soldat qui était venu au bout du comte cependant pas le temps de se glorifier de son acte, puisqu’il reçut un carreau en pleine tête et mourut aussitôt.
-
-            Les regards des deux hommes restants se tournèrent vers le peintre."""
 
     inqui "Qu’avez-vous fait, sombre idiot ?"
 
