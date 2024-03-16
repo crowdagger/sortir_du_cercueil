@@ -65,6 +65,25 @@ Loup : {a=https://freesound.org/people/sandboks/sounds/503516/}Sandboks{/a} (CC0
 Arbalète : {a=https://opengameart.org/content/crossbow-sounds}HolgiB{/a} (CC-By)
 
 
+SOUTIENS SUR {a=https://patreon.com/crowdagger}PATREON{/a}
+
+Ortie
+Qamille
+fredp
+Ariel
+Julien Rothwiller
+Stéphane 
+Laure valager
+Alexandre
+Clément 
+Cyberfossil
+Willow
+Alex_Q
+Irène Lestang 
+Danaae 
+
+
+
 
 
 MERCI D'AVOIR JOUÉ

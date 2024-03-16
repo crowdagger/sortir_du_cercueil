@@ -40,7 +40,7 @@ screen stats():
                 text "[compassion:.0f] %" xalign 0.5
                 bar value compassion range 100.0 xsize 150 left_bar "gui/bar/left_cyan.png" right_bar "gui/bar/right_cyan.png"
 
-                text "ARTISTE" xalign 0.5
+                text "INTELLIGENCE" xalign 0.5
                 text "[artiste:.0f] %" xalign 0.5
                 bar value artiste range 100.0 xsize 150 left_bar "gui/bar/left_indigo.png" right_bar "gui/bar/right_indigo.png"
 
@@ -51,3 +51,5 @@ screen stats():
             
                 
             text "TEMPS ÉCOULÉ : [heures]H[minutes]'[secondes]''" xalign 0.5
+            $ percent = renpy.count_seen_dialogue_blocks() * 100 / renpy.count_dialogue_blocks()
+            text "TEXTE VU (TOUTES PARTIES CUMULÉES) : [percent:.0f] %" xalign 0.5
