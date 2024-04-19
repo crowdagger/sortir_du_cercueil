@@ -410,9 +410,9 @@ label scene_2:
     "De son côté, William s’inclinait respectueusement et serrait la main du comte, ou, plutôt, se faisait {a=call:main}broyer la main{/a} par lui."
 
     if "baise_main" in stats.flags:
-        "Il regretta de ne pas lui avoit plutôt fait un baise-main. C'était clairement moins risqué."
+        "Il regretta de ne pas lui avoir plutôt fait un baise-main. C'était clairement moins risqué."
 
-    william "Ravi de faire votre connaissance, Monsieur le comte."
+    william "Ravi de faire votre connaissance, Monsieur le Comte."
 
     ekul "Venez. Vous devez mourir de faim. Je vais prendre vos bagages."
 
@@ -636,7 +636,7 @@ label scene_5:
     $ stats.nonchalance_max += 1
     $ stats.chatoyance_max += 1
     menu:
-        "Fuire":
+        "Fuir":
             $ stats.chatoyance += 1
             """
             Le jeune homme écarquilla les yeux d’un air horrifié, attrapa un coussin, l’envoya à la figure de celle qui avait prononcé la phrase et se fraya un passage à travers les femmes.
@@ -776,7 +776,7 @@ label scene_6:
             william """
             Vous devriez essayer de venir à Nonry.
 
-            Je suis sûr que vous feriez en malheur."""
+            Je suis sûr que vous feriez un malheur."""
 
             "Carimall arbora un demi-sourire timide. Elle était clairement tiraillée entre l'envie et l'appréhension."
 
@@ -1137,7 +1137,7 @@ label scene_10:
             william """
             Aucune idée.
 
-            Je suis trop crevée pour y réfléchir. Je vais aller me pieuter."""
+            Je suis trop crevé pour y réfléchir. Je vais aller me pieuter."""
 
             angele "Tu devrais peut-être faire plus attention aux mots que tu utilises."
 
@@ -1291,7 +1291,7 @@ label scene_12:
 
     angele "Je ne savais pas que tu savais te servir d'une épée."
 
-    "Wiliam non plus, il devait bien l'admettre."
+    "William non plus, il devait bien l'admettre."
 
     inqui "Prépare-toi à mourir !"
 

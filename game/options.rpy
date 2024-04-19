@@ -26,7 +26,7 @@ define gui.show_name = True
 
 ## La version du jeu.
 
-define config.version = "0.2"
+define config.version = "0.2.1"
 
 
 
