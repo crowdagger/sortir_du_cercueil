@@ -11,6 +11,10 @@ Creative Commons By-SA 4.0
 
 {a=https://crowdagger.fr}Lizzie Crowdagger{/a}
 
+CORRECTIONS
+
+Lamecarlate
+
 MOTEUR
 
 {a=https://www.renpy.org/}Ren'Py{/a}
